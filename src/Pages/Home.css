@@ -536,6 +536,26 @@ html, body, #root {
 
 }
 
+@media (max-width: 900px) {
+
+  /* elimina scroll inutile sotto */
+  .scuoletta-footer {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* sicurezza extra: niente spazio sotto la pagina */
+  .main-container {
+    padding-bottom: 0 !important;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+}
+
+
 
 .info-legal {
   text-align: center;  
