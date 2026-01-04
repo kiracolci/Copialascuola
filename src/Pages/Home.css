@@ -490,59 +490,7 @@ html, body, #root {
   color: #e1e1e1;
 }
 
-@media (max-width: 900px) {
 
-  /* HERO CONTENT: compatto ma naturale */
-  .hero-content {
-    padding-top: 120px;      /* meno aria sopra */
-    padding-left: 12px;
-    padding-right: 12px;
-    max-width: 100%;
-    margin-bottom: 0;        /* ❗ niente negativi */
-  }
-
-  /* HERO WRAPPER: margini bilanciati */
-  .hero-wrapper {
-    padding: 32px 20px 0 20px;
-  }
-
-  /* LOGO più piccolo e stabile */
-  .hero-logo-img {
-    width: 250px;
-    display: block;
-    margin: 0;
-  }
-
-  /* BOTTONI */
-  .hero-buttons {
-    gap: 12px;
-    margin-bottom: 14px;
-  }
-
-  .hero-buttons button {
-    padding: 9px 16px;
-    font-size: 13px;
-  }
-
-  /* TESTO */
-  .hero-description {
-    font-size: 16px;
-    max-width: 100%;
-  }
-
-  /* CONTAINER: niente blocchi strani */
-  .main-container {
-    min-height: 100svh;   /* ok per iOS */
-    padding-bottom: 0;
-    margin: 0;            /* ❗ fondamentale */
-  }
-
-  /* FOOTER: stop allo scroll fantasma */
-  .scuoletta-footer {
-    margin: 6px 0 0 0;
-    padding: 0;
-  }
-}
 
 
 
@@ -559,4 +507,43 @@ html, body, #root {
 
 .home-page .mobile-menu-icon div {
   background: white !important;
+}
+
+@media (max-width: 900px) {
+
+  /* 🔒 la hero NON deve creare scroll */
+  .main-container {
+    height: 100svh;     /* non min-height */
+    overflow: hidden;   /* stop scroll */
+  }
+
+  /* contenuto centrato verticalmente */
+  .hero-wrapper {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  /* logo più piccolo */
+  .hero-logo-img {
+    width: 240px;
+  }
+
+  /* bottoni */
+  .hero-buttons {
+    margin-bottom: 12px;
+  }
+
+  /* footer DENTRO la hero */
+  .scuoletta-footer {
+    margin-top: 12px;
+  }
 }
