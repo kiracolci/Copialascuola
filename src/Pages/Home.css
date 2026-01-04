@@ -222,11 +222,14 @@ html, body, #root {
   flex-direction: column;
   gap: 25px;
   font-size: 22px;
+  background: rgb(250, 250, 240); /* già coerente con il sito */
+  color: #000;
 }
 
 .mobile-fullscreen p {
   cursor: pointer;
   font-weight: 500;
+  color: #000;
 }
 
 .mobile-fullscreen .close-btn {
@@ -498,8 +501,12 @@ html, body, #root {
 /* MOBILE */
 @media (max-width: 900px) {
   .hero-wrapper {
-    flex-direction: column;
-    padding: 60px 20px 0 20px; /* Reduced top padding */
+    padding: 80px 32px 0 32px; 
+    /* ↑ più spazio a destra e sinistra */
+  }
+
+  .hero-content {
+    padding-right: 12px; /* micro respiro extra */
   }
 
   .hero-left {
