@@ -490,34 +490,33 @@ html, body, #root {
   color: #e1e1e1;
 }
 
-
 @media (max-width: 900px) {
 
-  /* 1️⃣ reset vero della hero su mobile */
+  /* HERO CONTENT: compatto ma naturale */
   .hero-content {
-    padding-top: 140px;      /* ↓ era 350px */
-    padding-left: 10px;         /* ❗ reset fondamentale */
-    padding-right: 10px;
+    padding-top: 120px;      /* meno aria sopra */
+    padding-left: 12px;
+    padding-right: 12px;
     max-width: 100%;
-    margin-bottom: -40px;
+    margin-bottom: 0;        /* ❗ niente negativi */
   }
 
-  /* 2️⃣ padding simmetrico e centrato */
+  /* HERO WRAPPER: margini bilanciati */
   .hero-wrapper {
-    padding: 40px 24px 0 24px; /* sx = dx */
+    padding: 32px 20px 0 20px;
   }
 
-  /* 3️⃣ logo più piccolo */
+  /* LOGO più piccolo e stabile */
   .hero-logo-img {
-    width: 260px;
-    margin: 0 0;
+    width: 250px;
     display: block;
+    margin: 0;
   }
 
-  /* 4️⃣ bottoni più compatti */
+  /* BOTTONI */
   .hero-buttons {
     gap: 12px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .hero-buttons button {
@@ -525,25 +524,24 @@ html, body, #root {
     font-size: 13px;
   }
 
-  /* 5️⃣ descrizione più leggibile */
+  /* TESTO */
   .hero-description {
     font-size: 16px;
     max-width: 100%;
   }
 
-  /* 6️⃣ elimina lo scroll sotto una volta per tutte */
+  /* CONTAINER: niente blocchi strani */
   .main-container {
-    min-height: 100svh;   /* iOS fix */
+    min-height: 100svh;   /* ok per iOS */
     padding-bottom: 0;
-    margin-top: 180px;
-    margin-bottom: -40px;
+    margin: 0;            /* ❗ fondamentale */
   }
 
+  /* FOOTER: stop allo scroll fantasma */
   .scuoletta-footer {
-    margin: 8px 0 0 0;
+    margin: 6px 0 0 0;
     padding: 0;
   }
-
 }
 
 

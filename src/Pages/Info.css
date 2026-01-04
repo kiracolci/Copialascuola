@@ -378,6 +378,12 @@ color: #feda33;  padding: 0 4px;
     grid-template-columns: 1fr;
     
   }
+
+  .highlight-box-large {
+margin-left: 3px;    
+margin-right: 3px;
+    color: #000000;
+  }
 }
 
 @media (max-width: 900px) {
