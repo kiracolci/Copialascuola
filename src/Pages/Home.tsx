@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
 export default function Home() {
-  const [blipLeft, setBlipLeft] = useState(true);
-  const [blipRight, setBlipRight] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();

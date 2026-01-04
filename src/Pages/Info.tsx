@@ -1,5 +1,5 @@
 import "./Info.css";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Info() {
    const [showPopup, setShowPopup] = useState(false);
