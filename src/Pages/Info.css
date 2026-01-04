@@ -372,6 +372,9 @@ color: #feda33;  padding: 0 4px;
 @media (max-width: 900px) {
   .info-columns-wrapper {
     grid-template-columns: 1fr;
+    margin-left: -10px;
+    margin-right: -10px;
+
   }
 
   .info-columns {
