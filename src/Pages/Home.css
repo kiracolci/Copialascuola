@@ -304,9 +304,10 @@ html, body, #root {
 /* Blinking animated text */
 .fase-blink {
   animation: fadeBlink 1.8s ease-in-out infinite;
-  color: #fffdf6;
+  color: #000000;
   display: inline-block;
   padding-right: 30px;
+
 }
 
 /* Smooth fade-in / fade-out */
@@ -500,7 +501,7 @@ html, body, #root {
 
   /* più respiro laterale (soprattutto a destra) */
   .hero-wrapper {
-    padding: 60px 28px 0 28px;
+    padding: 30px 15px 0 20px;
   }
 
   /* meno spazio sopra "PROGETTO IN CORSO" */
