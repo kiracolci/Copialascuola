@@ -496,8 +496,8 @@ html, body, #root {
   /* 1️⃣ reset vero della hero su mobile */
   .hero-content {
     padding-top: 140px;      /* ↓ era 350px */
-    padding-left: 0;         /* ❗ reset fondamentale */
-    padding-right: 0;
+    padding-left: 10px;         /* ❗ reset fondamentale */
+    padding-right: 10px;
     max-width: 100%;
   }
 
@@ -538,6 +538,7 @@ html, body, #root {
 
   .scuoletta-footer {
     margin: 8px 0 0 0;
+    margin-bottom: -30px;
     padding: 0;
   }
 
