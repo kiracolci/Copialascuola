@@ -298,13 +298,14 @@ html, body, #root {
  /* Static part of the text */
 .fase-static {
   font-weight: 700;
-  background: #fcd932;  
+  background: #fcd932; 
+  color: #000000; 
 }
 
 /* Blinking animated text */
 .fase-blink {
   animation: fadeBlink 1.8s ease-in-out infinite;
-  color: #000000;
+  color: #ffffff;
   display: inline-block;
   padding-right: 30px;
 
@@ -536,22 +537,56 @@ html, body, #root {
 
 @media (max-width: 900px) {
 
-  /* elimina scroll inutile sotto */
-  .scuoletta-footer {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
+  /* 1️⃣ reset vero della hero su mobile */
+  .hero-content {
+    padding-top: 140px;      /* ↓ era 350px */
+    padding-left: 0;         /* ❗ reset fondamentale */
+    padding-right: 0;
+    max-width: 100%;
   }
 
-  /* sicurezza extra: niente spazio sotto la pagina */
+  /* 2️⃣ padding simmetrico e centrato */
+  .hero-wrapper {
+    padding: 40px 24px 0 24px; /* sx = dx */
+  }
+
+  /* 3️⃣ logo più piccolo */
+  .hero-logo-img {
+    width: 260px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* 4️⃣ bottoni più compatti */
+  .hero-buttons {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .hero-buttons button {
+    padding: 9px 16px;
+    font-size: 13px;
+  }
+
+  /* 5️⃣ descrizione più leggibile */
+  .hero-description {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  /* 6️⃣ elimina lo scroll sotto una volta per tutte */
   .main-container {
-    padding-bottom: 0 !important;
+    min-height: 100svh;   /* iOS fix */
+    padding-bottom: 0;
   }
 
-  html, body {
-    overflow-x: hidden;
+  .scuoletta-footer {
+    margin: 8px 0 0 0;
+    padding: 0;
   }
 
 }
+
 
 
 
