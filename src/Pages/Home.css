@@ -499,6 +499,7 @@ html, body, #root {
     padding-left: 10px;         /* ❗ reset fondamentale */
     padding-right: 10px;
     max-width: 100%;
+    margin-bottom: -40px;
   }
 
   /* 2️⃣ padding simmetrico e centrato */
