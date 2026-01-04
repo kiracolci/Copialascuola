@@ -1,0 +1,282 @@
+@font-face {
+    font-family: "doll";
+    src: url("/fonts/Baby Doll.ttf") format("truetype");
+  }
+.residenza-wrapper {
+    background: #fffaf0;
+  }
+
+  .residenza-editorial {
+    position: relative;
+    background: none; /* remove bg from here */
+  }
+  
+  .residenza-editorial::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/BG.png");
+    background-repeat: repeat;
+    background-size: 800px auto;
+    background-position: center top;
+    background-attachment: fixed;
+    opacity: 0.7; /* 👈 adjust this */
+    pointer-events: none;
+  }
+  
+  .residenza-editorial > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  
+  
+  
+  /* HERO */
+  .residenza-hero {
+    padding: 180px 20px 100px;
+    text-align: center;
+  }
+  
+  .hero-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 4px 10px;
+    background: #feda33;           /* same yellow you already use */
+    color: #1c1c1c;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transform: rotate(4deg);
+  }
+  
+  .editorial-title {
+    max-width: 620px;              /* 👈 narrower = poster look */
+    margin: 0 auto 10px;
+    text-align: center;
+    color: #1f1f1f;
+    font-family: "Cormorant Garamond", serif;
+    line-height: 1.05;
+  }
+  
+  .editorial-title span {
+    display: block;               /* 👈 forces stacking */
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  /* CARTOGRAFIA */
+  .editorial-title span:first-child {
+    font-size: clamp(44px, 6vw, 68px);
+    font-style: oblique;
+    text-align: left;
+
+  }
+  
+  /* AFFETTIVA E IMMATERIALE */
+  .editorial-title span:last-child {
+    font-size: clamp(30px, 4vw, 40px);
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  
+  .residenza-hero p {
+    font-size: 15px;
+    opacity: 0.55;
+    margin-top: 8px;
+    letter-spacing: 0.3px;
+  }
+  
+  
+  /* LAYOUT */
+  .residenza-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 20px;
+    align-items: stretch; /* IMPORTANT */
+  }
+  
+  /* TEXT */
+  .residenza-text .section {
+    margin-bottom: 90px;
+  }
+
+  
+  
+  .residenza-text h3 {
+    font-size: 13px;
+    letter-spacing: 2px;
+    opacity: 0.6;
+    margin-bottom: 20px;
+  }
+  
+  .residenza-text p {
+    font-size: 17px;
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+  
+  /* HIGHLIGHT */
+  .highlight {
+    background: #feda33;
+    padding: 0 4px;
+  }
+  
+  /* IMAGE COLUMN (STICKY – FIXED) */
+  .residenza-slideshow {
+    position: sticky;
+    top: 120px;
+    align-self: flex-start;
+  }
+  
+  .residenza-slideshow img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+    border-radius: 1px;
+  }
+  
+  /* SCROLL ANIMATION */
+  .fade {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* BROCHURE */
+  .brochure {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .brochure a {
+    display: inline-block;
+    background-color: #feda33;
+    color: #1f1f1f;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin-top: 10px;
+    font-weight: 600;
+    text-decoration: underline;   
+  }
+
+  .brochure a:hover {
+    background-color: #000000;
+    color:#feda33;
+  }
+  /* Mobile images are hidden by default (desktop) */
+.mobile-image {
+    display: none;
+  }
+
+  /* POPUP */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 25px 40px;
+  border-radius: 8px;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+  /* FOOTER */
+.residenza-footer {
+    text-align: center;
+    padding: 20px 20px 20px;
+  }
+  
+  .residenza-footer .footer-copy {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 8px;
+  }
+  
+  .residenza-footer .footer-sub {
+    font-size: 13px;
+    opacity: 0.5;
+  }  
+  
+
+  
+  /* MOBILE (Base Milano–style alternating flow) */
+  /* MOBILE BASE MILANO BEHAVIOR */
+  @media (max-width: 900px) {
+
+    .residenza-content {
+      display: block;            /* kill grid */
+      max-width: 100%;
+      padding: 0 16px 120px;     /* balanced mobile padding */
+      margin: 0;
+    }
+  
+    /* hide desktop sticky image */
+    .residenza-slideshow {
+      display: none;
+    }
+  
+    /* show mobile images */
+    .mobile-image {
+      display: block;
+      margin: 40px 0;
+    }
+  
+    .mobile-image img {
+      width: 100%;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+  
+    /* spacing */
+    .section {
+      margin-bottom: 80px;
+      text-align: justify;
+    }
+  
+    /* ✅ KEEP ANIMATION (lighter than desktop) */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+  
+    .fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .residenza-editorial {
+      background-attachment: fixed;
+    }
+  }

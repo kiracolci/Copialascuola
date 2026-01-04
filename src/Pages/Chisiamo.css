@@ -1,0 +1,133 @@
+.chisiamo-wrapper {
+    min-height: 100vh;
+    background: #fffbec;
+  }
+  
+  /* TITLE */
+  .chisiamo-title-section {
+    max-width: 1100px;
+    margin: 160px auto 100px;
+    padding: 0 20px;
+  }
+  
+  .chisiamo-eyebrow {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 14px;
+    background: #feda33;
+    padding: 4px 8px;
+    transform: rotate(-2deg);
+  }
+  
+  .chisiamo-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(42px, 6vw, 64px);
+    line-height: 1.1;
+  }
+  
+  .chisiamo-title span {
+    font-style: italic;
+    opacity: 0.8;
+  }
+  
+  /* GRID */
+  .chisiamo-grid {
+    max-width: 1100px;
+    margin: 0 auto 20px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+  
+  .chisiamo-box {
+    background: #fffef8;
+    padding: 40px 35px;
+    border-radius: 4px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+  }
+  
+  .chisiamo-box.wide {
+    grid-column: span 2;
+  }
+  
+  .chisiamo-box h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    font-family: "Cormorant Garamond", serif;
+    background: #feda33;
+    display: inline-block;   /* 👈 highlight solo sul testo */
+    padding: 4px 10px;
+  }
+  
+  
+  .chisiamo-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  
+  /* HIGHLIGHT */
+  .highlight {
+    background: #feda33;
+    padding: 0 4px;
+  }
+  
+  /* MOBILE */
+  @media (max-width: 900px) {
+    .chisiamo-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .chisiamo-box.wide {
+      grid-column: span 1;
+    }
+  
+    .chisiamo-title-section {
+      margin-top: 120px;
+      background-color: #fffbec;
+    }
+  }
+
+  /* FINAL CTA */
+.chisiamo-footer-cta {
+    background: #fffbec;
+    text-align: center;
+    padding: 30px 20px 20px;
+  }
+  
+  .footer-arrow {
+    width: 70px;
+    margin: 0 auto 30px;
+    display: block;
+  }
+  
+  .chisiamo-footer-cta h2 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+  }
+  
+  .chisiamo-footer-cta p {
+    font-size: 16px;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .footer-contact {
+    text-decoration: underline;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .footer-legal {
+    margin-top: 40px;
+    font-size: 12px;
+    opacity: 0.65;
+    line-height: 1.5;
+  }
+  
+  
