@@ -63,6 +63,8 @@
   justify-content: space-between;
   cursor: pointer;
   z-index: 2000;
+  color: #000000;
+
 }
 
 .mobile-menu-icon div {
@@ -81,6 +83,8 @@
   flex-direction: column;
   gap: 25px;
   font-size: 22px;
+  color: #000000;
+
 }
 
 .mobile-fullscreen .close-btn {
@@ -252,6 +256,8 @@
   font-size: 13px;
   letter-spacing: 2px;
   margin-bottom: 8px;
+  color: #000000;
+
 }
 
 .section-title {
@@ -260,6 +266,8 @@
   margin-bottom: 40px;
   font-family: "Cormorant Garamond", serif;
   letter-spacing: -20;
+  color: #000000;
+
 }
 
 /* ============================= */
@@ -278,6 +286,8 @@
   flex-direction: column;
   gap: 12px;
   text-align: left;
+  color: #000000;
+
 
 }
 
@@ -287,6 +297,8 @@
   font-size: 26px;
   font-weight: 600;
   width: fit-content;
+  color: #000000;
+
 }
 
 .column-subtitle {
@@ -295,6 +307,8 @@
   opacity: 0.6;
   font-weight: 700;
   margin-top: -12px;
+  color: #000000;
+
 }
 
 .column-text {
@@ -302,6 +316,8 @@
   line-height: 1.55;
   text-align: left;
   max-width: 350px;
+  color: #000000;
+
 }
 
 /* ============================= */
