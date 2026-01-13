@@ -89,6 +89,9 @@ export default function Home() {
         </div>
       )}
 
+<div className="logo">
+     <img src="/logo2.png" alt="La Scuoletta Logo" className="hero-logo-img" />
+   </div>
         </div>
       )}
 
