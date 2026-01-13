@@ -95,13 +95,33 @@
   cursor: pointer;
 }
 
-.logo {
-  position: absolute;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0.9;
-}
+  /* POPUP */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background: #fff;
+    padding: 25px 40px;
+    border-radius: 8px;
+    position: relative;
+    color: #000000;
+  }
+  .close-btn {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    font-size: 22px;
+    cursor: pointer;
+  }
 
 /* ============================= */
 /*        RESPONSIVE NAV         */
@@ -216,16 +236,6 @@
 
 .smart-link:hover {
   color: #000;                 /* o blu scuro / nero */
-}
-
-.smart-link::after {
-  content: "↗";
-  display: inline-block;
-  margin-left: 0.25em;
-  font-size: 0.7em;
-  vertical-align: super;
-  opacity: 1;
-  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .smart-link:hover {
@@ -352,7 +362,7 @@ color: #feda33;  padding: 0 4px;
 }
 
 .highlight-box-large {
-  padding: 40px 35px;
+  padding: 0px 0px;
   border-radius: 2px;
   color: #000000;
 }
@@ -409,7 +419,9 @@ margin-right: 3px;
   /* Optional: slightly tighter spacing */
   .info-column {
     gap: 8px;
+
   }
+
 }
 
 .project-banner {

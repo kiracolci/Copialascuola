@@ -61,7 +61,7 @@ export default function Residenza() {
         <p onClick={() => navigate("/")}>HOME</p>
         <p onClick={() => navigate("/Info")}>IL PROGETTO</p>
         <p onClick={() => navigate("/Chisiamo")}>CHI SIAMO</p>
-        <p onClick={() => navigate("/Galleria")}>GALLERIA IMMAGINI</p>
+        <p onClick={() => navigate("/Galleria")}></p>
         <p onClick={() => setShowPopup(true)}>CONTATTI</p>
       </div>
 
@@ -75,8 +75,27 @@ export default function Residenza() {
           <p onClick={() => navigate("/")}>HOME</p>
           <p onClick={() => navigate("/Info")}>IL PROGETTO</p>
           <p onClick={() => navigate("/Chisiamo")}>CHI SIAMO</p>
-          <p onClick={() => navigate("/Galleria")}>GALLERIA IMMAGINI</p>
+          <p onClick={() => navigate("/Galleria")}></p>
           <p onClick={() => setShowPopup(true)}>CONTATTI</p>
+
+           {/* POPUP */}
+      {showPopup && (
+        <div className="popup">
+          <div className="popup-content">
+            <span className="close-btn" onClick={() => setShowPopup(false)}>×</span>
+            <p>
+              Instagram:{' '}
+              <a href="https://www.instagram.com/scuoletta_sanlib" target="_blank" rel="noreferrer">
+                @scuoletta_sanlib
+              </a><br/>
+              Email:{' '}
+              <a href="mailto:scuoletta.sanlib@gmail.com">
+                scuoletta.sanlib@gmail.com
+              </a>
+            </p>
+          </div>
+        </div>
+      )}
         </div>
       )}
 

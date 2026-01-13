@@ -10,6 +10,8 @@ export default function ResidenzaSA() {
   );
 }
 
+
+
 function InfiniteMasonryTight() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [loading, setLoading] = useState(true);
@@ -37,6 +39,7 @@ function InfiniteMasonryTight() {
     resize();
     window.addEventListener("resize", resize);
 
+    
     // Preload images
     Promise.all(
       sources.map(

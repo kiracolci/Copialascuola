@@ -72,6 +72,25 @@ export default function Home() {
           <p onClick={() => navigate('/Galleria')}>GALLERIA IMMAGINI</p>
           <p onClick={() => setShowPopup(true)}>CONTATTI</p>
 
+           {/* POPUP */}
+      {showPopup && (
+        <div className="popup">
+          <div className="popup-content">
+            <span className="close-btn" onClick={() => setShowPopup(false)}>×</span>
+            <p>
+              Instagram:{' '}
+              <a href="https://www.instagram.com/scuoletta_sanlib" target="_blank" rel="noreferrer">
+                @scuoletta_sanlib
+              </a><br/>
+              Email:{' '}
+              <a href="mailto:scuoletta.sanlib@gmail.com">
+                scuoletta.sanlib@gmail.com
+              </a>
+            </p>
+          </div>
+        </div>
+      )}
+
         </div>
       )}
 
@@ -93,8 +112,8 @@ Centro culturale per San Liberatore        </p>
           <button className="outline" onClick={() => setShowPopup(true)}>CONTATTACI</button>
         </div>
 
-        <div className="footer-text">
-          <p className="footer-center-text">
+        <div className="the-text">
+          <p className="the-center-text">
             <span className="fase-static">FASE:</span>&nbsp;
             <span className="fase-blink">
               PIANIFICAZIONE ARCHITETTONICA

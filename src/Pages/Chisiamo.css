@@ -94,6 +94,35 @@
     }
   }
 
+    /* POPUP */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background: #fff;
+    padding: 25px 40px;
+    border-radius: 8px;
+    position: relative;
+    color: #000000;
+    z-index: index 10;
+  }
+  .close-btn {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
   /* FINAL CTA */
 .chisiamo-footer-cta {
     background: #fffbec;
