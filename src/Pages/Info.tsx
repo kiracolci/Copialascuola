@@ -16,7 +16,6 @@ return (
  <p onClick={() => (window.location.href = "/")}>HOME</p>
  <p onClick={() => (window.location.href = "/Residenza")}>LA RESIDENZA 2025</p>
  <p onClick={() => (window.location.href = "/Chisiamo")}>CHI SIAMO</p>
- <p onClick={() => (window.location.href = "/Galleria")}></p>
  <p onClick={() => setShowPopup(true)}>CONTATTI</p>
 </div>
 
@@ -41,7 +40,6 @@ return (
    <p onClick={() => (window.location.href = "/")}>HOME</p>
    <p onClick={() => (window.location.href = "/Residenza")}>LA RESIDENZA 2025</p>
    <p onClick={() => (window.location.href = "/Chisiamo")}>CHI SIAMO</p>
-   <p onClick={() => (window.location.href = "/Galleria")}></p>
    <p onClick={() => setShowPopup(true)}>CONTATTI</p>
 
     {/* POPUP */}

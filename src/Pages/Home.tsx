@@ -53,7 +53,6 @@ export default function Home() {
         <p onClick={() => navigate('/Info')}>IL PROGETTO</p>
         <p onClick={() => navigate('/Residenza')}>LA RESIDENZA 2025</p>
         <p onClick={() => navigate('/Chisiamo')}>CHI SIAMO</p>
-        <p onClick={() => navigate('/Galleria')}>GALLERIA IMMAGINI</p>
         <p onClick={() => setShowPopup(true)}>CONTATTI</p>
       </div>
 
@@ -69,7 +68,6 @@ export default function Home() {
           <p onClick={() => navigate('/Info')}>IL PROGETTO</p>
           <p onClick={() => navigate('/Residenza')}>LA RESIDENZA 2025</p>
           <p onClick={() => navigate('/Chisiamo')}>CHI SIAMO</p>
-          <p onClick={() => navigate('/Galleria')}>GALLERIA IMMAGINI</p>
           <p onClick={() => setShowPopup(true)}>CONTATTI</p>
 
            {/* POPUP */}

@@ -61,7 +61,6 @@ export default function Residenza() {
         <p onClick={() => navigate("/")}>HOME</p>
         <p onClick={() => navigate("/Info")}>IL PROGETTO</p>
         <p onClick={() => navigate("/Chisiamo")}>CHI SIAMO</p>
-        <p onClick={() => navigate("/Galleria")}></p>
         <p onClick={() => setShowPopup(true)}>CONTATTI</p>
       </div>
 
@@ -75,7 +74,6 @@ export default function Residenza() {
           <p onClick={() => navigate("/")}>HOME</p>
           <p onClick={() => navigate("/Info")}>IL PROGETTO</p>
           <p onClick={() => navigate("/Chisiamo")}>CHI SIAMO</p>
-          <p onClick={() => navigate("/Galleria")}></p>
           <p onClick={() => setShowPopup(true)}>CONTATTI</p>
 
            {/* POPUP */}

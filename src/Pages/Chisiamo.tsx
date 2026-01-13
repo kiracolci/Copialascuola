@@ -15,7 +15,6 @@ export default function Chisiamo() {
         <p onClick={() => navigate("/")}>HOME</p>
         <p onClick={() => navigate("/Info")}>IL PROGETTO</p>
         <p onClick={() => navigate("/Residenza")}>LA RESIDENZA 2025</p>
-        <p onClick={() => navigate("/Galleria")}></p>
         <p onClick={() => setShowPopup(true)}>CONTATTI</p>
       </div>
 
@@ -35,7 +34,6 @@ export default function Chisiamo() {
           <p onClick={() => navigate("/")}>HOME</p>
           <p onClick={() => navigate("/Info")}>IL PROGETTO</p>
           <p onClick={() => navigate("/Residenza")}>LA RESIDENZA 2025</p>
-          <p onClick={() => navigate("/Galleria")}></p>
           <p onClick={() => setShowPopup(true)}>CONTATTI</p>
            {/* POPUP */}
       {showPopup && (
