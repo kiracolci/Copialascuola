@@ -72,9 +72,6 @@ export default function Home() {
           <p onClick={() => navigate('/Galleria')}>GALLERIA IMMAGINI</p>
           <p onClick={() => setShowPopup(true)}>CONTATTI</p>
 
-          <div className="logo">
-            <img src="/logo2.png" alt="La Scuoletta Logo" className="hero-logo-img" />
-          </div>
         </div>
       )}
 
