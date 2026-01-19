@@ -10,6 +10,7 @@ export default function Residenza() {
   const [showContact, setShowContact] = useState(false);
 
 
+
   const images = [
     "/fotoresidenza/17.jpeg",
 "/fotoresidenza/1.jpeg",
@@ -35,7 +36,6 @@ export default function Residenza() {
 
   const [current, setCurrent] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
 
   /* SLIDESHOW */
   useEffect(() => {
@@ -365,18 +365,7 @@ Allo stesso tempo, durante il periodo di residenza sono emerse anche le criticit
           </div>
 
         </div>
- {/* POPUP */}
- {showPopup && (
-        <div className="popup">
-          <div className="popup-content">
-            <span className="close-btn" onClick={() => setShowPopup(false)}>×</span>
-            <p>
-              Instagram: <a href="https://www.instagram.com/scuoletta_sanlib" target="_blank">@scuoletta_sanlib</a><br />
-              Email: <a href="mailto:scuoletta.sanlib@gmail.com">scuoletta.sanlib@gmail.com</a>
-            </p>
-          </div>
-        </div>
-      )}
+
         {/* IMAGES */}
         <div className="residenza-slideshow">
           <img src={images[current]} alt="La Residenza" />
@@ -384,6 +373,9 @@ Allo stesso tempo, durante il periodo di residenza sono emerse anche le criticit
         </div>
 
       </section>
+      {showContact && (
+  <ContactPopup onClose={() => setShowContact(false)} />
+)}
       </div>
 
 {/* FOOTER */}
@@ -395,9 +387,6 @@ Allo stesso tempo, durante il periodo di residenza sono emerse anche le criticit
     Un futuro per un posto dimenticato | Strada Romita, Frazione San Liberatore (TR)
   </p>
 </footer>
-{showContact && (
-  <ContactPopup onClose={() => setShowContact(false)} />
-)}
 
     </div>
 

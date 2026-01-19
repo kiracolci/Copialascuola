@@ -8,7 +8,6 @@ import ContactPopup from "./ContactPopup";
 export default function Chisiamo() {
  const navigate = useNavigate();
  const [menuOpen, setMenuOpen] = useState(false);
- const [showPopup, setShowPopup] = useState(false);
  const [showContact, setShowContact] = useState(false);
 
 
@@ -231,7 +230,7 @@ export default function Chisiamo() {
    Vuoi unirti a noi per dare nuova vita a San Liberatore?
    <span
      className="footer-contact"
-     onClick={() => setShowPopup(true)}
+     onClick={() => setShowContact(true)}
    >
      {" "}Contattaci
    </span>
