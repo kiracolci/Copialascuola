@@ -77,7 +77,7 @@
     .contact-card {
       width: auto;
       max-width: 340px;          /* 👈 real limit */
-      margin: 0 20px;            /* 👈 guaranteed side space */
+      margin: 0 10px;            /* 👈 guaranteed side space */
       padding: 32px 24px;
       border-radius: 14px;
     }
