@@ -1,9 +1,12 @@
 import "./Info.css";
 import { useState } from "react";
+import ContactPopup from "./ContactPopup";
+
 
 export default function Info() {
    const [showPopup, setShowPopup] = useState(false);
    const [menuOpen, setMenuOpen] = useState(false);
+   const [showContact, setShowContact] = useState(false);
 
 return (
  <div className="info-wrapper">
@@ -16,8 +19,8 @@ return (
  <p onClick={() => (window.location.href = "/")}>HOME</p>
  <p onClick={() => (window.location.href = "/Residenza")}>LA RESIDENZA 2025</p>
  <p onClick={() => (window.location.href = "/Chisiamo")}>CHI SIAMO</p>
- <p onClick={() => setShowPopup(true)}>CONTATTI</p>
-</div>
+ <p onClick={() => setShowContact(true)}>CONTATTI</p>
+ </div>
 
 
 {/* MOBILE MENU ICON */}
@@ -40,26 +43,8 @@ return (
    <p onClick={() => (window.location.href = "/")}>HOME</p>
    <p onClick={() => (window.location.href = "/Residenza")}>LA RESIDENZA 2025</p>
    <p onClick={() => (window.location.href = "/Chisiamo")}>CHI SIAMO</p>
-   <p onClick={() => setShowPopup(true)}>CONTATTI</p>
+   <p onClick={() => setShowContact(true)}>CONTATTI</p>
 
-    {/* POPUP */}
-    {showPopup && (
-        <div className="popup">
-          <div className="popup-content">
-            <span className="close-btn" onClick={() => setShowPopup(false)}>×</span>
-            <p>
-              Instagram:{' '}
-              <a href="https://www.instagram.com/scuoletta_sanlib" target="_blank" rel="noreferrer">
-                @scuoletta_sanlib
-              </a><br/>
-              Email:{' '}
-              <a href="mailto:scuoletta.sanlib@gmail.com">
-                scuoletta.sanlib@gmail.com
-              </a>
-            </p>
-          </div>
-        </div>
-      )}
 
 
    <div className="logo">
@@ -107,10 +92,14 @@ return (
    <h3 className="column-title">Connessioni e Sport</h3>
    <p className="column-subtitle">Snodo Turistico</p>
    <p className="column-text">
-     Accessibile dalla Strada Romita, il borgo è un punto nevralgico per
-     l’escursionismo. Offre percorsi diretti verso il Parco Batteria e la
+   Accessibile dalla Strada Romita, 
+   il borgo è un punto nevralgico per l’escursionismo e i 
+   percorsi ciclabili. Offre percorsi diretti verso il Parco Batteria e la 
      <a href="https://cascatadellemarmore.info/" className="smart-link">
-   Cascata delle Marmore </a>, raggiungibile in 10 minuti in auto o circa 40 minuti a piedi, che accoglie ogni anno oltre 400.000 visitatori, confermandosi una delle mete piu visitate in Umbria. Inoltre offre percosi per bici diventando un
+   Cascata delle Marmore </a>, raggiungibile in
+   circa 1 oretta a piedi,  accoglie ogni anno oltre 400.000 visitatori, 
+   confermandosi una delle mete più visitate in Umbria. Inoltre la collina sopra San Liberatore offre
+    percorsi per bici diventando un
      riferimento per gli amanti di mountain bike e <a href="https://it.wikiloc.com/percorsi-mountain-bike/marmore-madonna-dello-scoglio-san-liberatore-bike-park-20875288" className="smart-link">
   downhill
 </a>.
@@ -120,7 +109,7 @@ return (
 
  <div className="info-column">
    <h3 className="column-title">Storia e comunità</h3>
-   <p className="column-subtitle">La Chiesa e gli Abitanti</p>
+   <p className="column-subtitle">La Chiesa e l´ex scuola</p>
    <p className="column-text">
    Il Borgo di San Liberatore ospita la Chiesa di
 Santa Croce, risalente ai primi del XVI secolo
@@ -132,7 +121,7 @@ ad essere la scuola del paese. Venne
 costruito durante la seconda guerra mondiale a
 supporto dei militari che presidiavano la
 contraerea al Parco Batteria, per poi divenire
-la scuola elementare
+la scuola elementare  fino agli anni sessanta. 
    </p>
  </div>
 </section>
@@ -173,15 +162,16 @@ la scuola elementare
          <p>
            L’edificio di circa 200 mq, utilizzato in passato come scuola e
            circolo, è abbandonato da decenni e richiede un recupero strutturale.
-           L’area comprende anche un terreno scosceso (bosco di querce e
-           seminativo).
+           L’ambito di intervento comprende anche un terreno scosceso (bosco di querce e
+           seminativo) retrostante alla ex-scuola.
          </p>
          <h4><span className="highlight1">★</span>  La visione <span className="highlight1">★</span> </h4>
          <p>          Trasformare la Scuoletta in un caso studio  per il rilancio delle aree interne, riportandola alla sua vocazione <span className="highlight">educativa e culturale</span>.
-         Particolare attenzione sarà data alla cura
-dell’ambiente circostante, raccogliendo buone
-pratiche dal territorio e creando momenti di
-confronto e apprendimento tra residenti.
+         Particolare attenzione sarà data alla cura dell’ambiente 
+         circostante e alle discipline artistiche, raccogliendo e 
+         diffondendo buone pratiche dal territorio e creando momenti 
+         di confronto e apprendimento tra residenti e avventori.
+
          </p>
        </div>
 
@@ -196,24 +186,21 @@ confronto e apprendimento tra residenti.
          <h4> <span className="highlight1">★</span> Il centro culturale ed i servizi <span className="highlight1">★</span>  </h4>
          <p>
            Il progetto si concentra sulla <span className="highlight">crescita della persona</span> e sul confronto
-           interdisciplinare, offrendo uno spazio <span className="highlight">dinamico e creativo</span>. Attività
-           dedicate all’arte, allo <span className="highlight">scambio culturale</span> e alla meditazione.
+           interdisciplinare, offrendo uno spazio <span className="highlight">dinamico e creativo</span>. Saranno previste 
+    attività dedicate all’arte, allo <span className="highlight">scambio culturale</span>, alla meditazione ed al ristoro..
          </p>
          <p>
-           Promozione enogastronomica e cura dell’ambiente. Realizzazione di un
-           centro per barattare i saperi e la formazione. Potenziali servizi
-           collaterali: ciclofficina e piccolo Bistrot.
+         Promozione enogastronomica e cura dell’ambiente. 
+         Realizzazione di un centro per scambiare saperi e 
+         conoscenze. Ma anche giochi, feste e piccoli concerti o spettacoli. 
+         Potenziali servizi collaterali: ciclofficina e piccolo Bistrot.
          </p>
          <p>
-           
-
-           In stretto contatto con il tessuto sociale e la
-conoscenza locale, sarà possibile proporre agli
-ospiti giornate dedicate alla scoperta dei boschi
-e delle piante spontanee.
-I prodotti del territorio verranno promossi
-all’interno della proposta del Bistrot, con un
-menù a base di materie prime locali.
+         In stretto contatto con il tessuto sociale e la conoscenza 
+         locale, sarà possibile proporre passeggiate etnobotaniche 
+         dedicate alla scoperta dei boschi e delle piante spontanee. 
+         I prodotti del territorio verranno promossi all’interno della proposta 
+         di ristoro bistrot, con un menù a base di materie prime locali.
          </p>
        </div>
      </div>
@@ -292,7 +279,9 @@ menù a base di materie prime locali.
    </div>
  </div>
 )}
-
+{showContact && (
+  <ContactPopup onClose={() => setShowContact(false)} />
+)}
 
    </section>
  </div>

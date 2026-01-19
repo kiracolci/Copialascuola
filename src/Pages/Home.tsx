@@ -3,18 +3,24 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
+import ContactPopup from "./ContactPopup";
+
 
 export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const [showContact, setShowContact] = useState(false);
+
 
   // IMAGES FOR BACKGROUND SLIDESHOW
   const introImages = [
-    '/14.PNG',
-    '/11.JPG',
-    '/3.PNG',
-    '/5.png'
+    '/homefoto/1.jpeg',
+    '/homefoto/2.jpeg',
+    '/homefoto/3.jpeg',
+    '/5.png',
+    '/homefoto/4.jpeg',
+
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -53,8 +59,8 @@ export default function Home() {
         <p onClick={() => navigate('/Info')}>IL PROGETTO</p>
         <p onClick={() => navigate('/Residenza')}>LA RESIDENZA 2025</p>
         <p onClick={() => navigate('/Chisiamo')}>CHI SIAMO</p>
-        <p onClick={() => setShowPopup(true)}>CONTATTI</p>
-      </div>
+        <p onClick={() => setShowContact(true)}>CONTATTI</p>
+        </div>
 
       {/* MOBILE MENU */}
       <div className="hamburger mobile-menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
@@ -68,7 +74,7 @@ export default function Home() {
           <p onClick={() => navigate('/Info')}>IL PROGETTO</p>
           <p onClick={() => navigate('/Residenza')}>LA RESIDENZA 2025</p>
           <p onClick={() => navigate('/Chisiamo')}>CHI SIAMO</p>
-          <p onClick={() => setShowPopup(true)}>CONTATTI</p>
+          <p onClick={() => setShowContact(true)}>CONTATTI</p>
 
            {/* POPUP */}
       {showPopup && (
@@ -124,30 +130,14 @@ Centro culturale per San Liberatore        </p>
 
       </div>
 
-      {/* POPUP */}
-      {showPopup && (
-        <div className="popup">
-          <div className="popup-content">
-            <span className="close-btn" onClick={() => setShowPopup(false)}>×</span>
-            <p>
-              Instagram:{' '}
-              <a href="https://www.instagram.com/scuoletta_sanlib" target="_blank" rel="noreferrer">
-                @scuoletta_sanlib
-              </a><br/>
-              Email:{' '}
-              <a href="mailto:scuoletta.sanlib@gmail.com">
-                scuoletta.sanlib@gmail.com
-              </a>
-            </p>
-          </div>
-        </div>
-      )}
-
       {/* FOOTER */}
       <div className="scuoletta-footer">
         <p>© 2024 Progetto La Scuoletta | San Liberatore.</p>
         <p>Un futuro per un posto dimenticato | Strada Romita, Frazione San Liberatore (TR)</p>
       </div>
+      {showContact && (
+  <ContactPopup onClose={() => setShowContact(false)} />
+)}
 
     </div>
   );

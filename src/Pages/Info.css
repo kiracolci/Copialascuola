@@ -178,7 +178,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/scuola retro.jpg");
+  background-image: url("/fotoinfo/scuola retro.webp");
   background-size: cover;
   background-position: center;
   z-index: 0; /* NOT negative */
