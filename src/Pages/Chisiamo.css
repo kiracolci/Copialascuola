@@ -43,38 +43,18 @@
 }
 
 .chisiamo-title-wrapper {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: 40px;
 }
 
+
 .chisiamo-title {
   max-width: 700px;
 }
 
-.chisiamo-smile {
-  width: 500px;              /* ⬅️ bigger */
-  height: auto;
-  margin-top: 30px;
-  transform: rotate(-10deg);
-  margin-left: -40px;  /* ⬅️ tilt to the left */
-}
 
-@media (max-width: 768px) {
-  .chisiamo-title-wrapper {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .chisiamo-smile {
-
-    width: 300px;
-    margin-top: -130px;
-    transform: rotate(-18deg);
-    align-self: flex-end; /* pushes it to the right */
-    margin-right: -30px;
-  }
-}
 
  /* GRID */
 .chisiamo-grid {

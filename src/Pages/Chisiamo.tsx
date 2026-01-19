@@ -62,12 +62,6 @@ export default function Chisiamo() {
       <em>e le realtà che rendono possibile</em> <br />
       La Scuoletta
     </h1>
-
-    <img
-      src="/smile.png"
-      alt=""
-      className="chisiamo-smile"
-    />
   </div>
 </section>
 
