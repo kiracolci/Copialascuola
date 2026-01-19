@@ -375,9 +375,7 @@ Allo stesso tempo, durante il periodo di residenza sono emerse anche le criticit
         </div>
 
       </section>
-      {showContact && (
-  <ContactPopup onClose={() => setShowContact(false)} />
-)}
+    
       </div>
 
 {/* FOOTER */}
@@ -389,6 +387,10 @@ Allo stesso tempo, durante il periodo di residenza sono emerse anche le criticit
     Un futuro per un posto dimenticato | Strada Romita, Frazione San Liberatore (TR)
   </p>
 </footer>
+
+{showContact && (
+  <ContactPopup onClose={() => setShowContact(false)} />
+)}
 
     </div>
 

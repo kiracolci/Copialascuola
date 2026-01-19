@@ -73,10 +73,12 @@
   }
   
   /* Mobile */
-  @media (max-width: 400px) {
+  @media (max-width: 600px) {
     .contact-card {
-      padding: 34px 26px;
-      max-width: 360px;
+      width: auto;
+      max-width: 340px;          /* 👈 real limit */
+      margin: 0 20px;            /* 👈 guaranteed side space */
+      padding: 32px 24px;
       border-radius: 14px;
     }
   
@@ -85,7 +87,7 @@
     }
   
     .contact-label {
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
   }
   
