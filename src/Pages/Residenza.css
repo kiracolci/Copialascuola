@@ -382,3 +382,37 @@ text-align: justify;}
     object-fit: cover;
   }
 }
+
+/* HAMBURGER BASE */
+.hamburger {
+  width: 28px;
+  height: 20px;
+  position: fixed;
+  top: 22px;
+  right: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger div {
+  height: 2px;
+  width: 100%;
+  background: #000;
+  transition: transform 0.35s ease, opacity 0.25s ease;
+}
+
+/* OPEN STATE → X */
+.hamburger.open div:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open div:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}

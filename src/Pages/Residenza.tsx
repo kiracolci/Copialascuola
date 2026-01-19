@@ -82,7 +82,10 @@ export default function Residenza() {
         <p onClick={() => setShowContact(true)}>CONTATTI</p>
         </div>
 
-      <div className="hamburger mobile-menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        <div
+  className={`hamburger mobile-menu-icon ${menuOpen ? "open" : ""}`}
+  onClick={() => setMenuOpen(!menuOpen)}
+>
         <div></div><div></div><div></div>
       </div>
 
