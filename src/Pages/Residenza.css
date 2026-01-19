@@ -385,7 +385,7 @@ text-align: justify;}
 
 /* HAMBURGER BASE */
 .hamburger {
-  width: 28px;
+  width: 24px;
   height: 20px;
   position: fixed;
   top: 22px;
@@ -400,15 +400,14 @@ text-align: justify;}
 
 .hamburger div {
   height: 2px;
-  width: 90%;
-  background: #ffffff;
+  width: 100%;
+  background: #242424;
   transition: transform 0.35s ease, opacity 0.25s ease;
 }
 
 /* OPEN STATE → X */
 .hamburger.open div:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
-  background-color: #000;
 }
 
 .hamburger.open div:nth-child(2) {
