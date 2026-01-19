@@ -90,7 +90,8 @@ export default function Residenza() {
       </div>
 
       {menuOpen && (
-        <div className="mobile-fullscreen">
+        <div className={`mobile-fullscreen ${menuOpen ? "open" : ""}`}>
+
           <p onClick={() => navigate("/")}>HOME</p>
           <p onClick={() => navigate("/Info")}>IL PROGETTO</p>
           <p onClick={() => navigate("/Chisiamo")}>CHI SIAMO</p>

@@ -25,8 +25,8 @@ return (
 
 {/* MOBILE MENU ICON */}
 <div
- className="hamburger mobile-menu-icon"
- onClick={() => setMenuOpen(!menuOpen)}
+  className={`hamburger mobile-menu-icon ${menuOpen ? "open" : ""}`}
+  onClick={() => setMenuOpen(!menuOpen)}
 >
  <div></div>
  <div></div>

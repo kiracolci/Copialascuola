@@ -27,9 +27,9 @@ export default function Chisiamo() {
 
      {/* MOBILE MENU */}
      <div
-       className="hamburger mobile-menu-icon"
-       onClick={() => setMenuOpen(!menuOpen)}
-     >
+  className={`hamburger mobile-menu-icon ${menuOpen ? "open" : ""}`}
+  onClick={() => setMenuOpen(!menuOpen)}
+>
        <div></div>
        <div></div>
        <div></div>

@@ -75,19 +75,19 @@
   /* Mobile */
   @media (max-width: 600px) {
     .contact-card {
-      width: auto;
-      max-width: 340px;          /* 👈 real limit */
-      margin: 0 10px;            /* 👈 guaranteed side space */
-      padding: 32px 24px;
-      border-radius: 14px;
+      width: 100%;              /* ⬅️ override calc(100% - 40px) */
+      max-width: 400px;         /* ⬅️ allow it to be bigger */
+      margin: 0 20px;           /* ⬅️ guaranteed side space */
+      padding: 44px 32px;       /* ⬅️ more presence */
+      border-radius: 18px;
     }
   
     .contact-card a {
-      font-size: 16px;
+      font-size: 17px;
     }
   
     .contact-label {
-      margin-bottom: 22px;
+      margin-bottom: 28px;
     }
   }
   

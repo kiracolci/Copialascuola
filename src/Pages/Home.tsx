@@ -62,9 +62,10 @@ export default function Home() {
         <p onClick={() => setShowContact(true)}>CONTATTI</p>
         </div>
 
-      {/* MOBILE MENU */}
-      <div className="hamburger mobile-menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
-        <div></div><div></div><div></div>
+      {/* MOBILE MENU */}<div
+  className={`hamburger mobile-menu-icon ${menuOpen ? "open" : ""}`}
+  onClick={() => setMenuOpen(!menuOpen)}
+>     <div></div><div></div><div></div>
       </div>
 
       {menuOpen && (
