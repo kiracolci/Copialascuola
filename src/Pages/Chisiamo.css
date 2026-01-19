@@ -2,20 +2,25 @@
   min-height: 100vh;
   background: #fffbec;
   color: #000000;
-
-
+  margin-top: -10;
 }
 
+.chisiamo-hero {
+  max-width: 1050px;     /* ⬅️ aligns with rest of site */
+  margin: 0 auto;        /* ⬅️ centers the block */
+  padding: 160px 20px 100px;
+}
 
 
 /* TITLE */
 .chisiamo-title-section {
   max-width: 1100px;
-  margin: 160px auto 100px;
-  padding: 0 20px;
-
+  margin: 120px auto 100px;
+  padding: 160px 80px 100px;
 
 }
+
+
  .chisiamo-eyebrow {
   font-size: 12px;
   letter-spacing: 2px;
@@ -34,7 +39,43 @@
  .chisiamo-title span {
   font-style: italic;
   opacity: 0.8;
+
 }
+
+.chisiamo-title-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.chisiamo-title {
+  max-width: 700px;
+}
+
+.chisiamo-smile {
+  width: 500px;              /* ⬅️ bigger */
+  height: auto;
+  margin-top: 30px;
+  transform: rotate(-10deg);
+  margin-left: -40px;  /* ⬅️ tilt to the left */
+}
+
+@media (max-width: 768px) {
+  .chisiamo-title-wrapper {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .chisiamo-smile {
+
+    width: 300px;
+    margin-top: -130px;
+    transform: rotate(-18deg);
+    align-self: flex-end; /* pushes it to the right */
+    margin-right: -30px;
+  }
+}
+
  /* GRID */
 .chisiamo-grid {
   max-width: 1100px;

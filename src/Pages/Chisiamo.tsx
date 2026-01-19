@@ -53,14 +53,23 @@ export default function Chisiamo() {
 
 
      {/* TITLE SECTION */}
-     <section className="chisiamo-title-section">
-       <span className="chisiamo-eyebrow">CHI SIAMO</span>
-       <h1 className="chisiamo-title">
-         Le persone, le famiglie <br />
-         <span>e le realtà che rendono possibile</span><br />
-         La Scuoletta
-       </h1>
-     </section>
+     <section className="chisiamo-hero">
+  <span className="hero-label">CHI SIAMO</span>
+
+  <div className="chisiamo-title-wrapper">
+    <h1 className="chisiamo-title">
+      Le persone, le famiglie <br />
+      <em>e le realtà che rendono possibile</em> <br />
+      La Scuoletta
+    </h1>
+
+    <img
+      src="/smile.png"
+      alt=""
+      className="chisiamo-smile"
+    />
+  </div>
+</section>
 
 
      {/* CONTENT GRID */}
