@@ -19,6 +19,7 @@
     border-radius: 16px;
     text-align: left;
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.25);
+    color: #000;
   }
   
   /* Close button */
@@ -72,7 +73,7 @@
   }
   
   /* Mobile */
-  @media (max-width: 600px) {
+  @media (max-width: 400px) {
     .contact-card {
       padding: 34px 26px;
       max-width: 360px;

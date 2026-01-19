@@ -358,6 +358,8 @@ Allo stesso tempo, durante il periodo di residenza sono emerse anche le criticit
           <div className="brochure fade visible">
           <figcaption>
           Foto di Chiara Pavolucci, residenza 2025    </figcaption>
+         < figcaption>
+          Testo di Chiara Pavolucci, Anna Martinatti e Federico D’Orazio   </figcaption>
             <p>Approfondisci il progetto</p>
             <a href="/brochure-residenza.pdf" download>
               ↓ Scarica la brochure (PDF)

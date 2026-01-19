@@ -148,6 +148,7 @@ text-align: justify;}
 }
 
 .intro-image figcaption {
+  color: #000;
   margin-top: 10px;
   font-size: 13px;
   opacity: 0.65;
