@@ -13,32 +13,26 @@ export default function ContactPopup({ onClose }: Props) {
           ×
         </button>
 
-        <div className="contact-content">
-  <div className="contact-text">
-    <p className="contact-label">Contatti</p>
+        <p className="contact-label">Contatti</p>
 
-    <p>
-      <span>Instagram</span><br />
-      <a
-        href="https://www.instagram.com/scuoletta_sanlib"
-        target="_blank"
-        rel="noreferrer"
-      >
-        @scuoletta_sanlib
-      </a>
-    </p>
+        <div className="contact-block">
+          <span className="contact-title">Instagram</span>
+          <a
+            href="https://www.instagram.com/scuoletta_sanlib"
+            target="_blank"
+            rel="noreferrer"
+          >
+            @scuoletta_sanlib
+          </a>
+        </div>
 
-    <p>
-      <span>Email</span><br />
-      <a href="mailto:scuoletta.sanlib@gmail.com">
-        scuoletta.sanlib@gmail.com
-      </a>
-    </p>
-  </div>
-
-</div>
-</div>
-</div>
-
+        <div className="contact-block">
+          <span className="contact-title">Email</span>
+          <a href="mailto:scuoletta.sanlib@gmail.com">
+            scuoletta.sanlib@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
   );
 }
