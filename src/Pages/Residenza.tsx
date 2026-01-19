@@ -91,7 +91,6 @@ export default function Residenza() {
 
       {menuOpen && (
         <div className="mobile-fullscreen">
-          <span className="close-btn" onClick={() => setMenuOpen(false)}>×</span>
           <p onClick={() => navigate("/")}>HOME</p>
           <p onClick={() => navigate("/Info")}>IL PROGETTO</p>
           <p onClick={() => navigate("/Chisiamo")}>CHI SIAMO</p>
