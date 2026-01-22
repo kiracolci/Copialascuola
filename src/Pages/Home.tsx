@@ -7,7 +7,6 @@ import ContactPopup from "./ContactPopup";
 
 
 export default function Home() {
-  const [showPopup, setShowPopup] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
   const [showContact, setShowContact] = useState(false);
@@ -77,24 +76,6 @@ export default function Home() {
           <p onClick={() => navigate('/Chisiamo')}>CHI SIAMO</p>
           <p onClick={() => setShowContact(true)}>CONTATTI</p>
 
-           {/* POPUP */}
-      {showPopup && (
-        <div className="popup">
-          <div className="popup-content">
-            <span className="close-btn" onClick={() => setShowPopup(false)}>×</span>
-            <p>
-              Instagram:{' '}
-              <a href="https://www.instagram.com/scuoletta_sanlib" target="_blank" rel="noreferrer">
-                @scuoletta_sanlib
-              </a><br/>
-              Email:{' '}
-              <a href="mailto:scuoletta.sanlib@gmail.com">
-                scuoletta.sanlib@gmail.com
-              </a>
-            </p>
-          </div>
-        </div>
-      )}
 
 <div className="logo">
      <img src="/logo2.png" alt="La Scuoletta Logo" className="hero-logo-img" />
@@ -117,8 +98,11 @@ Centro culturale per San Liberatore        </p>
 
         <div className="hero-buttons">
           <button onClick={() => navigate('/Info')}>COSA STA SUCCEDENDO?</button>
-          <button className="outline" onClick={() => setShowPopup(true)}>CONTATTACI</button>
+          <button className="outline"   onClick={() => setShowContact(true)}>CONTATTI</button>
         </div>
+
+      
+
 
         <div className="the-text">
           <p className="the-center-text">
