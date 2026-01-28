@@ -11,25 +11,6 @@ export default function Chisiamo() {
 
   const partners = [
     {
-      id: "proprietari",
-      title: "I Proprietari",
-      content: (
-        <>
-          <p>
-          Il progetto è promosso dalle famiglie <span className="highlight">Rapaccini</span> e{" "}
-            <span className="highlight">Rossi</span>, riunite nella società{" "}
-            <span className="highlight">Raro Srl</span>, proprietaria dell’edificio e del terreno retrostante.
-          </p>
-          <p>
-          L’obiettivo è investire in modo condiviso per valorizzare il
-           territorio, rinnovando un impegno attivo verso la comunità locale 
-           e promuovendo processi culturali e artistici.
-
-          </p>
-        </>
-      ),
-    },
-    {
       id: "rapaccini",
       title: "Famiglia Rapaccini",
       content: (
@@ -74,6 +55,31 @@ Promuove residenze multidisciplinari, incubazione progettuale, mediazione cultur
       ),
     },
     {
+      id: "Delinea",
+      title: "De Linea Architettura",
+      content: (
+        <>
+          <p>dedeede
+</p>
+        </>
+      ),
+    },
+    {
+      id: "persone",
+      title: "LE PERSONE FISICHE",
+      content: (
+        <>
+          <p>L’associazione è composta anche da <span className="highlight">persone fisiche</span>
+          che partecipano attivamente alla vita e alle attività del progetto.</p>
+          <p>
+          È possibile <span className="highlight">diventare parte dell’associazione</span>,
+    contribuendo alla crescita delle pratiche culturali, alla ricerca condivisa
+    e alla costruzione di una comunità aperta e partecipativa. Contattaci per unirti a noi!
+          </p>
+        </>
+      ),
+    },
+    {
       id: "demetra",
       title: "Demetra APS",
       content: (
@@ -85,6 +91,7 @@ Opera nella rigenerazione urbana, inclusione sociale, arti
         </>
       ),
     },
+    
     {
       id: "antroposofica",
       title: "Associazione Antroposofica Ternana",
@@ -170,6 +177,7 @@ Laboratori di autocostruzione, pratiche architettoniche sostenibili, ricerca mul
         </>
       ),
     },
+    
   ];
 
   return (
@@ -222,18 +230,58 @@ Laboratori di autocostruzione, pratiche architettoniche sostenibili, ricerca mul
 
       </section>
 
-      {/* BUBBLES */}
-      <section className="bubble-area">
-        {partners.map((p, i) => (
-          <button
-            key={p.id}
-            className={`bubble bubble-${i % 5}`}
-            onClick={() => setActive(p.id)}
-          >
-            {p.title}
-          </button>
-        ))}
-      </section>
+      {/* SEZIONE: LA PROPRIETÀ DEI TERRENI */}
+<h2 className="bubble-section-title">La proprietà dei terreni</h2>
+<section className="bubble-area">
+  {partners
+    .filter(p =>
+      ["rapaccini", "rossi"].includes(p.id)
+    )
+    .map((p, i) => (
+      <button
+        key={p.id}
+        className={`bubble bubble-${i % 5}`}
+        onClick={() => setActive(p.id)}
+      >
+        {p.title}
+      </button>
+    ))}
+</section>
+
+{/* SEZIONE: ASSOCIATI */}
+<h2 className="bubble-section-title">Associati</h2>
+<section className="bubble-area">
+  {partners
+    .filter(p =>
+      !["proprietari", "rapaccini", "rossi", "cura", "Delinea"].includes(p.id)
+    )
+    .map((p, i) => (
+      <button
+        key={p.id}
+        className={`bubble bubble-${i % 5}`}
+        onClick={() => setActive(p.id)}
+      >
+        {p.title}
+      </button>
+    ))}
+</section>
+
+{/* SEZIONE: COLLABORAZIONI */}
+<h2 className="bubble-section-title">Collaborazioni</h2>
+<section className="bubble-area">
+  {partners
+    .filter(p => ["Delinea", "cura"].includes(p.id))
+    .map((p, i) => (
+      <button
+        key={p.id}
+        className={`bubble bubble-${i % 5}`}
+        onClick={() => setActive(p.id)}
+      >
+        {p.title}
+      </button>
+    ))}
+</section>
+
 
        {/* POPUP */}
        {active && (

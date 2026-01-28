@@ -8,7 +8,7 @@
 .chisiamo-hero {
   max-width: 900px;
   margin: 0 auto;
-  padding: 160px 20px 80px;
+  padding: 160px 20px 10px;
 }
 
 .chisiamo-title {
@@ -33,7 +33,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
-  justify-content: center;
+  justify-content: left;
 }
 
 .bubble {
@@ -46,6 +46,26 @@
   color: #000;
 
 }
+.chisiamo-subtitle {
+font-style: italic;
+  margin-top: -20px;
+  font-size: 15px;
+  opacity: 0.7;
+  margin-left: 40px;
+}
+
+
+/* SECTION TITLES */
+.bubble-section-title {
+  max-width: 900px;
+  margin: 20px auto 16px;
+  padding: 0 20px;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
 
 .bubble:hover {
   transform: translateY(-4px);
