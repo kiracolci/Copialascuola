@@ -1,12 +1,9 @@
 import "./Chisiamo.css";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import ContactPopup from "./ContactPopup";
 
 
 export default function Chisiamo() {
-  const navigate = useNavigate();
-  const [menuOpen, setMenuOpen] = useState(false);
   const [showContact, setShowContact] = useState(false);
   const [active, setActive] = useState<string | null>(null);
 

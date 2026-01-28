@@ -6,7 +6,6 @@ import ContactPopup from "./ContactPopup";
 
 export default function Info() {
    const [showPopup, setShowPopup] = useState(false);
-   const [menuOpen, setMenuOpen] = useState(false);
    const [showContact, setShowContact] = useState(false);
 
 return (

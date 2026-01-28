@@ -8,7 +8,6 @@ import ContactPopup from "./ContactPopup";
 
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
   const [showContact, setShowContact] = useState(false);
 

@@ -1,12 +1,10 @@
 import { useEffect, useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
 import "./Residenza.css";
 import ContactPopup from "./ContactPopup";
 
 
 
 export default function Residenza() {
-  const navigate = useNavigate();
   const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [showContact, setShowContact] = useState(false);
 
@@ -36,7 +34,6 @@ export default function Residenza() {
   ];
 
   const [current, setCurrent] = useState(0);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   /* SLIDESHOW */
   useEffect(() => {
