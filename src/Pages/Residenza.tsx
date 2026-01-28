@@ -125,23 +125,23 @@ export default function Residenza() {
 <section className="intro-editorial">
   <div className="intro-text">
     <p>
-    Cartografia affettiva e immateriale di una comunità in 
-    trasformazione è un progetto di ascolto, mappatura e 
-    restituzione collettiva realizzato a San Liberatore e i luoghi dintorni, 
-    dai residenti della Residenza 2025: Chiara Pavolucci, Anna Martinatti e Federico D’Orazio.
+    "Cartografia affettiva e immateriale di una comunità in trasformazione" 
+    è un progetto di ascolto, mappatura e restituzione collettiva realizzato a
+     San Liberatore, nel comune di Terni, dai tre giovani professionisti della Residenza 2025: 
+     Federico D’Orazio, Anna Martinatti e Chiara Pavolucci.
+
 
     </p>
     <p>
-    La residenza nasce con l’obiettivo di approfondire 
-    la conoscenza del contesto locale e dei suoi attori,
-     attivando un processo collaborativo e orizzontale di 
-     ricerca e co-progettazione. Attraverso due settimane di 
-     lavoro sul campo, svolto insieme agli abitanti, ai proprietari 
-     e alle organizzazioni del territorio, il progetto ha raccolto 
-     storie, memorie e relazioni, contribuendo a immaginare nuove visioni di cura e sviluppo per il luogo.
-    Ne emerge una mappa non geografica ma relazionale, costruita dalle voci della comunità e le foto di Chiara Pavolucci.
-    
-
+    La residenza nasce con l’obiettivo di approfondire la conoscenza del contesto 
+    locale e dei suoi attori, attivando un processo collaborativo e orizzontale 
+    di ricerca e co-progettazione. Nel corso di due settimane di lavoro sul campo,
+     svolto insieme agli abitanti, ai proprietari dell'immobile e alle organizzazioni
+      del territorio, i tre creativi hanno raccolto storie, memorie e relazioni legate a
+       La Scuoletta di San Liberatore, contribuendo ad immaginare nuove visioni e possibili
+        traiettorie future per questo luogo. Ne emerge una mappatura non geografica ma relazionale, 
+        costruita attraverso le voci della comunità, lo sguardo dell'artista e fotografa Chiara
+         Pavolucci e il lavoro di comunicazione analogica di Federico D’Orazio e Anna Martinatti.
     </p>
   </div>
 
@@ -359,14 +359,17 @@ Allo stesso tempo, durante il periodo di residenza sono emerse anche le criticit
 
           {/* BROCHURE */}
           <div className="brochure fade visible">
-          <figcaption>
-          Foto di Chiara Pavolucci, residenza 2025    </figcaption>
-         < figcaption>
-          Testo di Chiara Pavolucci, Anna Martinatti e Federico D’Orazio   </figcaption>
-            <p>Approfondisci il progetto</p>
-            <a href="/brochure-residenza.pdf" download>
-              ↓ Scarica la brochure (PDF)
-            </a>
+          <div className="credits">
+    <p><strong>Fotografie</strong> — Chiara Pavolucci</p>
+    <p>
+      <strong>Manifesti</strong> — Federico D’Orazio e Anna Martinatti  
+      <br />
+      <span className="credits-note">
+        realizzati a partire dalle testimonianze degli abitanti di San Liberatore
+      </span>
+    </p>
+    <p><strong>Testi</strong> — Federico D’Orazio, Anna Martinatti, Chiara Pavolucci</p>
+  </div>
           </div>
 
         </div>

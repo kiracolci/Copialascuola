@@ -3,18 +3,180 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ContactPopup from "./ContactPopup";
 
-
-
 export default function Chisiamo() {
- const navigate = useNavigate();
- const [menuOpen, setMenuOpen] = useState(false);
- const [showContact, setShowContact] = useState(false);
+  const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [showContact, setShowContact] = useState(false);
+  const [active, setActive] = useState<string | null>(null);
 
+  const partners = [
+    {
+      id: "proprietari",
+      title: "I Proprietari",
+      content: (
+        <>
+          <p>
+          Il progetto è promosso dalle famiglie <span className="highlight">Rapaccini</span> e{" "}
+            <span className="highlight">Rossi</span>, riunite nella società{" "}
+            <span className="highlight">Raro Srl</span>, proprietaria dell’edificio e del terreno retrostante.
+          </p>
+          <p>
+          L’obiettivo è investire in modo condiviso per valorizzare il
+           territorio, rinnovando un impegno attivo verso la comunità locale 
+           e promuovendo processi culturali e artistici.
 
+          </p>
+        </>
+      ),
+    },
+    {
+      id: "rapaccini",
+      title: "Famiglia Rapaccini",
+      content: (
+        <>
+          <p>
+          Presente a San Liberatore dagli anni Sessanta, 
+          la famiglia Rapaccini ha intrecciato medicina, 
+          arte e pedagogia. 
 
- return (
-   <div className="chisiamo-wrapper">
+          </p>
+          <p>
+          Giorgio Rapaccini, medico e pittore antroposofico, 
+          ha dedicato la sua vita allo studio del colore e all’espressione artistica.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: "rossi",
+      title: "Famiglia Rossi",
+      content: (
+        <>
+          <p>
+          Legata profondamente a San Liberatore, la famiglia Rossi ha
+           costruito una storia tra Italia e Sudafrica senza mai perdere il rapporto con il paese.
+Un legame fatto di ritorni, memoria e relazioni mantenute nel tempo.
 
+          </p>
+        </>
+      ),
+    },
+    {
+      id: "cura",
+      title: "C.U.R.A.",
+      content: (
+        <>
+          <p>
+          Centro Umbro Residenze Artistiche riconosciuto dalla Regione Umbria dal 2018.
+Promuove residenze multidisciplinari, incubazione progettuale, mediazione culturale e pratiche artistiche contemporanee.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: "demetra",
+      title: "Demetra APS",
+      content: (
+        <>
+          <p>Associazione di promozione sociale fondata a Terni nel 2004.
+Opera nella rigenerazione urbana, inclusione sociale, arti
+ performative e progettazione culturale radicata nei territori.</p>
+          
+        </>
+      ),
+    },
+    {
+      id: "antroposofica",
+      title: "Associazione Antroposofica Ternana",
+      content: (
+        <>
+          <p>
+            Gruppo dedicato allo studio e alla diffusione dell’antroposofia fondata da Rudolf Steiner.
+          </p>
+          <p>
+            Organizza conferenze, seminari e incontri su arte, pedagogia, salute e scienza spirituale.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: "hacklab",
+      title: "Hacklab Terni APS",
+      content: (
+        <>
+          <p>
+            Associazione che unisce tecnologia, creatività e condivisione del sapere.
+          </p>
+          <p>
+            Offre uno spazio aperto per workshop, laboratori ed eventi collaborativi.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: "polimera",
+      title: "Polimera APS",
+      content: (
+        <>
+          <p>Associazione culturale con sede a Roma.</p>
+          <p>
+            Promuove pratiche collettive, ricerca culturale ed eventi partecipativi
+            con attenzione alle comunità.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: "anonima",
+      title: "Anonima Impresa Sociale",
+      content: (
+        <>
+          <p>
+          Associazione nata nel 2025, 
+          con sede a Perugia e operativa a Spazio Modu. 
+          Promozione artistica del territorio, produzione musicale, network professionale per artisti e creativi.
+
+          </p>
+        </>
+      ),
+    },
+    {
+      id: "add",
+      title: "ADD Aps",
+      content: (
+        <>
+          <p>
+          Associazione di promozione sociale nata nel 2024, con sede a Terni.
+Laboratori di autocostruzione, pratiche architettoniche sostenibili, ricerca multidisciplinare.
+          </p>
+        
+        </>
+      ),
+    },
+
+    {
+      id: "edit",
+      title: "EDIT Cooperativa Sociale",
+      content: (
+        <>
+          <p>
+          Cooperativa fondata nel 2009 con sede a Terni,
+           promotrice del progetto Pecore Gialle a Strettura (PG)
+            vicinissima alla Valnerina. Si occupa di inserimento 
+            lavorativo di categorie svantaggiate, progetta e realizza
+             beni e servizi educativi, formativi ed informativi attraverso 
+             partecipazione, pratica dei diritti e sviluppo di relazioni positive con l’ambiente e la società.
+          </p>
+        </>
+      ),
+    },
+  ];
+
+  return (
+    <div className="chisiamo-wrapper">
+
+      {/* MENU */}
+      
 
      {/* DESKTOP MENU */}
      <div className="top-menu desktop-menu">
@@ -27,9 +189,9 @@ export default function Chisiamo() {
 
      {/* MOBILE MENU */}
      <div
-  className={`hamburger mobile-menu-icon ${menuOpen ? "open" : ""}`}
-  onClick={() => setMenuOpen(!menuOpen)}
->
+       className="hamburger mobile-menu-icon"
+       onClick={() => setMenuOpen(!menuOpen)}
+     >
        <div></div>
        <div></div>
        <div></div>
@@ -43,181 +205,48 @@ export default function Chisiamo() {
          <p onClick={() => navigate("/Info")}>IL PROGETTO</p>
          <p onClick={() => navigate("/Residenza")}>LA RESIDENZA 2025</p>
          <p onClick={() => setShowContact(true)}>CONTATTI</p>
-     
 
-  <div className="logo">
-    <img src="/logo2.png" alt="La Scuoletta Logo" className="hero-logo-img" />
-  </div>
-       </div>
-     )}
+      </div>
+    )}
+      {/* HERO */}
+      <section className="chisiamo-hero">
+        <span className="hero-label">CHI SIAMO</span>
+        <h1 className="chisiamo-title">
+          Le persone, le famiglie <br />
+          <em>e le realtà che rendono possibile</em> <br />
+          La Scuoletta
+        </h1>
+        <p className="chisiamo-subtitle">
+  Per scoprire di più su ogni realtà, clicca sui nomi.
+</p>
 
+      </section>
 
-     {/* TITLE SECTION */}
-     <section className="chisiamo-hero">
-  <span className="hero-label">CHI SIAMO</span>
+      {/* BUBBLES */}
+      <section className="bubble-area">
+        {partners.map((p, i) => (
+          <button
+            key={p.id}
+            className={`bubble bubble-${i % 5}`}
+            onClick={() => setActive(p.id)}
+          >
+            {p.title}
+          </button>
+        ))}
+      </section>
 
-  <div className="chisiamo-title-wrapper">
-    <h1 className="chisiamo-title">
-      Le persone, le famiglie <br />
-      <em>e le realtà che rendono possibile</em> <br />
-      La Scuoletta
-    </h1>
-  </div>
-</section>
+       {/* POPUP */}
+       {active && (
+        <div className="bubble-popup" onClick={() => setActive(null)}>
+          <div className="bubble-popup-content" onClick={(e) => e.stopPropagation()}>
+            <span className="close-btn" onClick={() => setActive(null)}>×</span>
+            <h3>{partners.find(p => p.id === active)?.title}</h3>
+            {partners.find(p => p.id === active)?.content}
+          </div>
+        </div>
+      )}
 
-
-     {/* CONTENT GRID */}
-     <section className="chisiamo-grid">
-
-
-       {/* BOX – PROPRIETARI */}
-       <div className="chisiamo-box wide">
-         <h3>I Proprietari</h3>
-         <p>
-           Il progetto è promosso dalle famiglie <span className="highlight">Rapaccini</span> e
-           <span className="highlight"> Rossi</span>, riunite nella società
-           <span className="highlight"> Raro Srl</span>, proprietaria dell’edificio
-           e del terreno retrostante.
-         </p>
-         <p>
-           L’obiettivo è investire in modo condiviso per valorizzare il territorio,
-           rinnovando un impegno attivo verso la comunità locale e promuovendo processi
-           culturali e artistici.
-         </p>
-       </div>
-
-
-       {/* BOX – RAPACCINI */}
-       <div className="chisiamo-box">
-         <h3>Famiglia Rapaccini</h3>
-         <p>
-           Presente a San Liberatore dagli anni Sessanta, la famiglia Rapaccini
-           ha intrecciato medicina, arte e pedagogia.
-         </p>
-         <p>
-           Giorgio Rapaccini, medico e pittore antroposofico, ha dedicato la sua vita
-           allo studio del colore e all’espressione artistica.
-         </p>
-       </div>
-
-
-       {/* BOX – ROSSI */}
-       <div className="chisiamo-box">
-         <h3>Famiglia Rossi</h3>
-         <p>
-           Legata profondamente a San Liberatore, la famiglia Rossi ha costruito
-           una storia tra Italia e Sudafrica senza mai perdere il rapporto con il paese.
-         </p>
-         <p>
-           Un legame fatto di ritorni, memoria e relazioni mantenute nel tempo.
-         </p>
-       </div>
-
-
-       {/* BOX – CURA */}
-       <div className="chisiamo-box">
-         <h3>C.U.R.A.</h3>
-         <p>
-           Centro Umbro Residenze Artistiche riconosciuto dalla Regione Umbria dal 2018.
-         </p>
-         <p>
-           Promuove residenze multidisciplinari, incubazione progettuale,
-           mediazione culturale e pratiche artistiche contemporanee.
-         </p>
-       </div>
-
-
-       {/* BOX – DEMETRA */}
-       <div className="chisiamo-box">
-         <h3>Demetra APS</h3>
-         <p>
-           Associazione di promozione sociale fondata a Terni nel 2004.
-         </p>
-         <p>
-           Opera nella rigenerazione urbana, inclusione sociale, arti performative
-           e progettazione culturale radicata nei territori.
-         </p>
-       </div>
-
-
-          {/* BOX – Associazione Antroposofica Ternana*/}
-          <div className="chisiamo-box">
-         <h3>Associazione Antroposofica Ternana</h3>
-         <p>
-      Gruppo dedicato allo studio e alla diffusione dell’antroposofia,
-      la “scienza dello spirito” fondata da Rudolf Steiner, che guarda all’essere umano in modo integrato e profondo.      </p>
-         <p>. L’associazione organizza conferenze, seminari e
-           incontri su temi culturali, artistici e spirituali, valorizzando r
-           iflessioni su pedagogia, salute, arte e scienza appartenenti al pensiero
-            antroposofico. Fondata nel 1956, è una delle realtà antroposofiche storiche in Italia e
-            offre momenti di confronto e crescita personale alla comunità di Terni.
-         </p>
-
-
-       </div>
-        {/* BOX – Hacklab Terni Aps */}
-        <div className="chisiamo-box">
-         <h3>Hacklab Terni Aps</h3>
-         <p>
-         Associazione di promozione sociale che unisce tecnologia, creatività e condivisione del sapere.          </p>
-         <p>
-         Offre uno spazio aperto e collaborativo per workshop, laboratori ed eventi,
-         promuovendo cultura digitale, software libero e apprendimento pratico.
-          Un luogo dove idee e persone crescono insieme, rafforzando innovazione e
-          comunità locale, attiva inclusiva.
-         </p>
-       </div>
-
-
-       {/* BOX – Polimera APS */}
-       <div className="chisiamo-box">
-         <h3>Polimera APS</h3>
-         <p>
-         Associazione culturale con sede a Roma che promuove progetti artistici, sociali e partecipativi.          </p>
-         <p>. Lavora su pratiche collettive, ricerca culturale ed eventi, creando spazi di incontro,
-           sperimentazione e condivisione, con un forte attenzione alle comunità e ai territori.
-         </p>
-
-
-       </div>
-
-
-          {/* BOX – Anonima Impresa Sociale */}
-          <div className="chisiamo-box">
-         <h3>Anonima Impresa Sociale</h3>
-         <p>
-         cooperativa sociale e culturale con sede a Perugia
-          che da anni porta avanti progetti di rigenerazione urbana e culturale.         </p>
-         <p>. Attiva dal 2014, promuove eventi, cinema di comunità e attività
-           partecipative per la città e il territorio umbro.
-           Ha dato nuova vita a spazi come il PostModernissimo, un cinema storico
-            ripristinato e gestito con un forte spirito comunitario, oltre a collaborare a
-            iniziative culturali e hub per il sociale e l’arte. La cooperativa crea occasioni
-            di incontro e condivisione, valorizzando creatività e partecipazione locale.
-         </p>
-
-
-       </div>
-
-
-          {/* BOX – ADD Academy Umbria ASD */}
-          <div className="chisiamo-box">
-         <h3>ADD Academy Umbria ASD</h3>
-         <p>
-         Associazione sportiva che diffonde l’Art du Déplacement (ADD), una disciplina di movimento creativo e consapevole.         </p>
-         <p>. Basata su valori come rispetto, forza e collaborazione,
-           organizza corsi, allenamenti ed eventi a Terni e in Umbria per
-           tutte le età, favorendo crescita personale e comunità attiva.
-         </p>
-
-
-       </div>
-
-
-     </section>
-
-
-{/* FINAL CTA */}
+      {/* FINAL CTA */}
 <section className="chisiamo-footer-cta">
  <img
    src="/arrow.png"
@@ -249,12 +278,8 @@ export default function Chisiamo() {
  </div>
 </section>
 
-{showContact && (
-  <ContactPopup onClose={() => setShowContact(false)} />
-)}
-   </div>
- );
+
+      {showContact && <ContactPopup onClose={() => setShowContact(false)} />}
+    </div>
+  );
 }
-
-
-

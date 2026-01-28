@@ -1,147 +1,100 @@
 .chisiamo-wrapper {
-  min-height: 100vh;
   background: #fffbec;
-  color: #000000;
-  margin-top: -10;
+  color: #000;
+  min-height: 100vh;
 }
 
+/* HERO */
 .chisiamo-hero {
-  max-width: 1050px;     /* ⬅️ aligns with rest of site */
-  margin: 0 auto;        /* ⬅️ centers the block */
-  padding: 160px 20px 100px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 160px 20px 80px;
 }
 
-
-/* TITLE */
-.chisiamo-title-section {
-  max-width: 1100px;
-  margin: 120px auto 100px;
-  padding: 160px 80px 100px;
-
-}
-
-
- .chisiamo-eyebrow {
-  font-size: 12px;
-  letter-spacing: 2px;
-  font-weight: 600;
-  display: inline-block;
-  margin-bottom: 14px;
-  background: #feda33;
-  padding: 4px 8px;
-  transform: rotate(-2deg);
-}
- .chisiamo-title {
+.chisiamo-title {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(42px, 6vw, 64px);
   line-height: 1.1;
 }
- .chisiamo-title span {
+
+.chisiamo-title em {
   font-style: italic;
   opacity: 0.8;
-
 }
 
-.chisiamo-title-wrapper {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-}
-
-
-.chisiamo-title {
-  max-width: 700px;
-}
-
-
-
- /* GRID */
-.chisiamo-grid {
-  max-width: 1100px;
-  margin: 0 auto 20px;
+/* BUBBLES */
+.bubble-area {
+  max-width: 900px;
+  margin: 0 auto 15px;
   padding: 0 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-}
- .chisiamo-box {
-  background: #fffdf200;
-  padding: 40px 35px;
-  border-radius: 4px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.04);
-  border-style:dashed;
-}
- .chisiamo-box.wide {
-  grid-column: span 2;
-}
- .chisiamo-box h3 {
-  font-size: 22px;
-  margin-bottom: 16px;
-  font-family: "Cormorant Garamond", serif;
-  background: #feda33;
-  display: inline-block;   /* 👈 highlight solo sul testo */
-  padding: 4px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
 }
 
-.chisiamo-box p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 14px;
-}
- /* HIGHLIGHT */
-.highlight {
-  background: #feda33;
-  padding: 0 4px;
-}
- /* MOBILE */
-@media (max-width: 900px) {
-  .chisiamo-grid {
-    grid-template-columns: 1fr;
-  }
-   .chisiamo-box.wide {
-    grid-column: span 1;
-  }
-   .chisiamo-title-section {
-    margin-top: 120px;
-    background-color: #fffbec;
-  }
+.bubble {
+  border: none;
+  border-radius: 999px;
+  padding: 16px 24px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.bubble:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
 
+/* YELLOW VARIATIONS */
+.bubble-0 { background: #feda33; }
+.bubble-1 { background: #ffe36a; }
+.bubble-2 { background: #ffd84d; }
+.bubble-3 { background: #ffef9a; }
+.bubble-4 { background: #ffd233; }
 
-
-  /* POPUP */
-.popup {
+/* POPUP */
+.bubble-popup {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  inset: 0;
   background: rgba(0,0,0,0.35);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
- .popup-content {
-  background: #fff;
-  padding: 25px 40px;
-  border-radius: 8px;
+
+.bubble-popup-content {
+  background: #fffdf4;
+  max-width: 520px;
+  padding: 30px 34px;
+  border-radius: 18px;
   position: relative;
-  color: #000000;
-  z-index: index 10;
 }
+
+.bubble-popup-content h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+
+.bubble-popup-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
 .close-btn {
   position: absolute;
-  right: 10px;
-  top: 8px;
+  top: 12px;
+  right: 16px;
   font-size: 22px;
   cursor: pointer;
 }
 
-
-/* FINAL CTA */
-.chisiamo-footer-cta {
+ /* FINAL CTA */
+ .chisiamo-footer-cta {
   background: #fffbec;
   text-align: center;
   padding: 30px 20px 20px;
@@ -175,3 +128,34 @@
 }
 
 
+
+/* HIGHLIGHT */
+.highlight {
+  background: #feda33;
+  padding: 0 4px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .chisiamo-hero {
+    padding: 120px 16px 60px;
+  }
+
+  .bubble {
+    font-size: 13px;
+    padding: 14px 20px;
+  }
+}
+@media (max-width: 900px) {
+  .bubble-popup {
+    align-items: flex-start;       /* not full vertical centering */
+    padding-top: 120px;            /* space from top */
+  }
+
+  .bubble-popup-content {
+    width: calc(100% - 32px);      /* 👈 margins on both sides */
+    max-width: 420px;              /* keeps it card-like */
+    border-radius: 20px;
+    padding: 24px;
+  }
+}
