@@ -34,30 +34,33 @@ export default function MobileMenu({ onContact }: MobileMenuProps) {
 
       {/* 📱 FULLSCREEN MENU */}
       <div className={`mobile-fullscreen ${open ? "show" : ""}`}>
-        {items.map((item) => {
-          const isActive =
-            item.path !== "#contact" &&
-            location.pathname === item.path;
-
-          return (
-            <p
-              key={item.label}
-              className={`mobile-item ${isActive ? "active" : ""}`}
-              onClick={() => {
-                setOpen(false);
-                item.path === "#contact"
-                  ? onContact()
-                  : navigate(item.path);
-              }}
-            >
-              {item.label}
-            </p>
-          );
-        })}
-
-        {/* LOGO */}
-        <div className="mobile-logo">
+        {/* 🖼 LOGO AT TOP */}
+        <div className="mobile-logo-top">
           <img src="/logo2.png" alt="La Scuoletta" />
+        </div>
+
+        {/* MENU ITEMS */}
+        <div className="mobile-items">
+          {items.map((item) => {
+            const isActive =
+              item.path !== "#contact" &&
+              location.pathname === item.path;
+
+            return (
+              <p
+                key={item.label}
+                className={`mobile-item ${isActive ? "active" : ""}`}
+                onClick={() => {
+                  setOpen(false);
+                  item.path === "#contact"
+                    ? onContact()
+                    : navigate(item.path);
+                }}
+              >
+                {item.label}
+              </p>
+            );
+          })}
         </div>
       </div>
     </>
