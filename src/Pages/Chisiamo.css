@@ -15,6 +15,7 @@
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(42px, 6vw, 64px);
   line-height: 1.1;
+  color: #000;
 }
 
 .chisiamo-title em {
@@ -136,26 +137,23 @@
 }
 
 /* MOBILE */
+/* ================= MOBILE POPUP CARD (FINAL FIX) ================= */
 @media (max-width: 900px) {
-  .chisiamo-hero {
-    padding: 120px 16px 60px;
-  }
 
-  .bubble {
-    font-size: 13px;
-    padding: 14px 20px;
-  }
-}
-@media (max-width: 900px) {
   .bubble-popup {
-    align-items: flex-start;       /* not full vertical centering */
-    padding-top: 120px;            /* space from top */
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0;
   }
 
   .bubble-popup-content {
-    width: calc(100% - 32px);      /* 👈 margins on both sides */
-    max-width: 420px;              /* keeps it card-like */
-    border-radius: 20px;
-    padding: 24px;
+    width: 100%;
+    max-width: none;
+
+    margin: 120px 16px 0;   /* 👈 THIS is the key */
+    padding: 22px 22px 26px;
+
+    border-radius: 22px;
+    box-sizing: border-box;
   }
 }
