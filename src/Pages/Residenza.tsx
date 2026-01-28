@@ -4,6 +4,7 @@ import "./Residenza.css";
 import ContactPopup from "./ContactPopup";
 
 
+
 export default function Residenza() {
   const navigate = useNavigate();
   const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -74,35 +75,7 @@ export default function Residenza() {
   return (
     <div className="residenza-wrapper">
 
-      {/* MENU */}
-      <div className="top-menu desktop-menu">
-        <p onClick={() => navigate("/")}>HOME</p>
-        <p onClick={() => navigate("/Info")}>IL PROGETTO</p>
-        <p onClick={() => navigate("/Chisiamo")}>CHI SIAMO</p>
-        <p onClick={() => setShowContact(true)}>CONTATTI</p>
-        </div>
 
-        <div
-  className={`hamburger mobile-menu-icon ${menuOpen ? "open" : ""}`}
-  onClick={() => setMenuOpen(!menuOpen)}
->
-        <div></div><div></div><div></div>
-      </div>
-
-      {menuOpen && (
-        <div className={`mobile-fullscreen ${menuOpen ? "open" : ""}`}>
-
-          <p onClick={() => navigate("/")}>HOME</p>
-          <p onClick={() => navigate("/Info")}>IL PROGETTO</p>
-          <p onClick={() => navigate("/Chisiamo")}>CHI SIAMO</p>
-          <p onClick={() => setShowContact(true)}>CONTATTI</p>
-
-
-   <div className="logo">
-     <img src="/logo2.png" alt="La Scuoletta Logo" className="hero-logo-img" />
-   </div>
-        </div>
-      )}
 
 
       {/* EDITORIAL STAGE */}

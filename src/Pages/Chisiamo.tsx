@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ContactPopup from "./ContactPopup";
 
+
 export default function Chisiamo() {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -187,35 +188,8 @@ Laboratori di autocostruzione, pratiche architettoniche sostenibili, ricerca mul
       
 
      {/* DESKTOP MENU */}
-     <div className="top-menu desktop-menu">
-       <p onClick={() => navigate("/")}>HOME</p>
-       <p onClick={() => navigate("/Info")}>IL PROGETTO</p>
-       <p onClick={() => navigate("/Residenza")}>LA RESIDENZA 2025</p>
-       <p onClick={() => setShowContact(true)}>CONTATTI</p>
-       </div>
+    
 
-
-     {/* MOBILE MENU */}
-     <div
-       className="hamburger mobile-menu-icon"
-       onClick={() => setMenuOpen(!menuOpen)}
-     >
-       <div></div>
-       <div></div>
-       <div></div>
-     </div>
-
-
-     {menuOpen && (
-       <div className="mobile-fullscreen">
-         <span className="close-btn" onClick={() => setMenuOpen(false)}>×</span>
-         <p onClick={() => navigate("/")}>HOME</p>
-         <p onClick={() => navigate("/Info")}>IL PROGETTO</p>
-         <p onClick={() => navigate("/Residenza")}>LA RESIDENZA 2025</p>
-         <p onClick={() => setShowContact(true)}>CONTATTI</p>
-
-      </div>
-    )}
       {/* HERO */}
       <section className="chisiamo-hero">
         <span className="hero-label">CHI SIAMO</span>

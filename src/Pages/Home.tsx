@@ -6,10 +6,12 @@ import './Home.css';
 import ContactPopup from "./ContactPopup";
 
 
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
   const [showContact, setShowContact] = useState(false);
+
 
 
   // IMAGES FOR BACKGROUND SLIDESHOW
@@ -54,34 +56,6 @@ export default function Home() {
 
 
       {/* HEADER — unchanged */}
-      <div className="top-menu desktop-menu">
-        <p onClick={() => navigate('/Info')}>IL PROGETTO</p>
-        <p onClick={() => navigate('/Residenza')}>LA RESIDENZA 2025</p>
-        <p onClick={() => navigate('/Chisiamo')}>CHI SIAMO</p>
-        <p onClick={() => setShowContact(true)}>CONTATTI</p>
-        </div>
-
-      {/* MOBILE MENU */}<div
-  className={`hamburger mobile-menu-icon ${menuOpen ? "open" : ""}`}
-  onClick={() => setMenuOpen(!menuOpen)}
->     <div></div><div></div><div></div>
-      </div>
-
-      {menuOpen && (
-        <div className="mobile-fullscreen">
-          <span className="close-btn" onClick={() => setMenuOpen(false)}>×</span>
-
-          <p onClick={() => navigate('/Info')}>IL PROGETTO</p>
-          <p onClick={() => navigate('/Residenza')}>LA RESIDENZA 2025</p>
-          <p onClick={() => navigate('/Chisiamo')}>CHI SIAMO</p>
-          <p onClick={() => setShowContact(true)}>CONTATTI</p>
-
-
-<div className="logo">
-     <img src="/logo2.png" alt="La Scuoletta Logo" className="hero-logo-img" />
-   </div>
-        </div>
-      )}
 
       {/* 🌟 HERO CONTENT (left side only now) */}
       <div className="hero-content">

@@ -1,0 +1,72 @@
+.desktop-menu {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 60px;
+  
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 100;
+  }
+  
+  /* TEXT */
+  .menu-item {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    padding: 6px 14px;
+    white-space: nowrap;
+    transition: color 0.25s ease, opacity 0.25s ease;
+  }
+  
+  .menu-item:hover {
+    opacity: 0.6;
+  }
+  
+  .menu-item.active {
+    font-weight: 700;
+    color: #000;
+  }
+  
+  /* 🟡 SMASHING-STYLE MOVING HIGHLIGHT */
+  .menu-pill {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    height: 26px;
+    background: #feda33;
+    border-radius: 999px;
+  
+    z-index: 1;
+  
+    transition:
+      transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      width 0.45s ease;
+  }
+  
+  
+  /* HOME PAGE (dark background support) */
+  .home-page .menu-item {
+    color: white;
+  }
+  
+  /* ACTIVE PAGE */
+.menu-item.active {
+    color: #000;
+    font-weight: 700;
+  }
+  
+  /* INACTIVE — WHITE TEXT (HOME + PROGETTO) */
+  .menu-item.inactive-light {
+    color: white;
+  }
+  
+  /* INACTIVE — BLACK TEXT (CHI SIAMO + RESIDENZA) */
+  .menu-item.inactive-dark {
+    color: #000;
+  }
+  

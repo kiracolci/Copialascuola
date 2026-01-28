@@ -3,6 +3,7 @@ import { useState } from "react";
 import ContactPopup from "./ContactPopup";
 
 
+
 export default function Info() {
    const [showPopup, setShowPopup] = useState(false);
    const [menuOpen, setMenuOpen] = useState(false);
@@ -15,44 +16,10 @@ return (
 
 
    {/* DESKTOP MENU */}
-<div className="top-menu desktop-menu">
- <p onClick={() => (window.location.href = "/")}>HOME</p>
- <p onClick={() => (window.location.href = "/Residenza")}>LA RESIDENZA 2025</p>
- <p onClick={() => (window.location.href = "/Chisiamo")}>CHI SIAMO</p>
- <p onClick={() => setShowContact(true)}>CONTATTI</p>
- </div>
-
-
-{/* MOBILE MENU ICON */}
-<div
-  className={`hamburger mobile-menu-icon ${menuOpen ? "open" : ""}`}
-  onClick={() => setMenuOpen(!menuOpen)}
->
- <div></div>
- <div></div>
- <div></div>
-</div>
-
-
-{/* FULLSCREEN MOBILE MENU */}
-{menuOpen && (
- <div className="mobile-fullscreen">
-   <span className="close-btn" onClick={() => setMenuOpen(false)}>×</span>
-
-
-   <p onClick={() => (window.location.href = "/")}>HOME</p>
-   <p onClick={() => (window.location.href = "/Residenza")}>LA RESIDENZA 2025</p>
-   <p onClick={() => (window.location.href = "/Chisiamo")}>CHI SIAMO</p>
-   <p onClick={() => setShowContact(true)}>CONTATTI</p>
 
 
 
-   <div className="logo">
-     <img src="/logo2.png" alt="La Scuoletta Logo" className="hero-logo-img" />
-   </div>
-  
- </div>
-)}
+
 {/* HERO SECTION – DESKTOP (image left, text right) / MOBILE (text first) */}
 <section className="dynamic-hero">
   <h1 className="dynamic-title">
