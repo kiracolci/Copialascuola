@@ -21,6 +21,8 @@
 .chisiamo-title em {
   font-style: italic;
   opacity: 0.8;
+  color: #000;
+
 }
 
 /* BUBBLES */
@@ -41,6 +43,8 @@
   font-size: 14px;
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: #000;
+
 }
 
 .bubble:hover {
