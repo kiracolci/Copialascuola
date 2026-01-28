@@ -96,11 +96,11 @@ Opera nella rigenerazione urbana, inclusione sociale, arti
       content: (
         <>
           <p>
-            Gruppo dedicato allo studio e alla diffusione dell’antroposofia fondata da Rudolf Steiner.
+          Fondata nel 1956 ed oggi intitolata a Giorgio Rapaccini. 
+          Organizza attività creative e pedagogiche, eventi di promozione 
+          e diffusione del pensiero antroposofico steineriano e dell’agricoltura biodinamica.
           </p>
-          <p>
-            Organizza conferenze, seminari e incontri su arte, pedagogia, salute e scienza spirituale.
-          </p>
+        
         </>
       ),
     },
@@ -110,10 +110,9 @@ Opera nella rigenerazione urbana, inclusione sociale, arti
       content: (
         <>
           <p>
-            Associazione che unisce tecnologia, creatività e condivisione del sapere.
-          </p>
+          Associazione nata nel 2006, con sede a Terni.
+          Organizza laboratori creativi analogico-digitali per bambini, famiglie, amatori e professionisti.          </p>
           <p>
-            Offre uno spazio aperto per workshop, laboratori ed eventi collaborativi.
           </p>
         </>
       ),
@@ -123,17 +122,15 @@ Opera nella rigenerazione urbana, inclusione sociale, arti
       title: "Polimera APS",
       content: (
         <>
-          <p>Associazione culturale con sede a Roma.</p>
-          <p>
-            Promuove pratiche collettive, ricerca culturale ed eventi partecipativi
-            con attenzione alle comunità.
-          </p>
+          <p>Associazione di promozione sociale nata nel 2025, con sede a Roma.
+          Si occupa di rigenerazione ambientale, urbana e sociale.</p>
+    
         </>
       ),
     },
     {
       id: "anonima",
-      title: "Anonima Impresa Sociale",
+      title: "Anonima Aps",
       content: (
         <>
           <p>
