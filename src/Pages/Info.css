@@ -502,7 +502,7 @@ margin-right: 3px;
   font-weight: 600;
   cursor: pointer;
   color: #000000;
-
+  margin-right: 5px;
 }
 
 .info-legal {
@@ -510,7 +510,15 @@ margin-right: 3px;
   opacity: 0.7;
   margin-top: 10px;
   color: #000000;
+  margin-bottom: -20px;
 
+}
+
+.info-legal p {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: -10px;
+  color: #000000;
 }
 
 

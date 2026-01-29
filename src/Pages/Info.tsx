@@ -200,7 +200,7 @@ la scuola elementare  fino agli anni sessanta.
      <h2>PARTECIPA ALLA RINASCITA.</h2>
      <p>
  Vuoi unirti a noi per dare nuova vita a San Liberatore?{" "}
- <span className="footer-contact underline-contact" onClick={() => setShowPopup(true)}>
+ <span className="footer-contact underline-contact" onClick={() => setShowContact(true)}>
  Contattaci
 </span>
   per contribuire con idee

@@ -328,7 +328,7 @@ text-align: justify;}
   }
   
   .residenza-footer .footer-copy {
-    font-size: 14px;
+    font-size: 12px;
     opacity: 0.7;
     margin-bottom: 8px;
     color: #000000;
@@ -336,9 +336,10 @@ text-align: justify;}
   }
   
   .residenza-footer .footer-sub {
-    font-size: 13px;
+    font-size: 12px;
     opacity: 0.7;
     color: #000000;
+    margin: -5px;
 
   }  
   
