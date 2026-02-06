@@ -20,7 +20,7 @@ export default function Chisiamo() {
 
           </p>
           <p>
-          Giorgio Rapaccini, medico e pittore antroposofico, 
+          Giorgio Rapaccini, medico e pittore antroposofo, 
           ha dedicato la sua vita allo studio del colore e all’espressione artistica.
           </p>
         </>
