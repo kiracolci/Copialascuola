@@ -57,7 +57,7 @@ Promuove residenze multidisciplinari, incubazione progettuale, mediazione cultur
       title: "De Linea Architettura",
       content: (
         <>
-          <p>dedeede
+          <p>
 </p>
         </>
       ),
