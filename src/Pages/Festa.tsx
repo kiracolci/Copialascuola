@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "./festa.css";
+import "./Festa.css";
 
 const schedule = [
   {
