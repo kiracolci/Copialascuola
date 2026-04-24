@@ -11,7 +11,9 @@ const items = [
   { label: "IL PROGETTO", path: "/Info" },
   { label: "CHI SIAMO", path: "/Chisiamo" },
   { label: "LA RESIDENZA 2025", path: "/Residenza" },
+  { label: "LA FESTA", path: "/Festa" },
   { label: "CONTATTI", path: "#contact" },
+
 ];
 
 export default function DesktopMenu({ onContact }: DesktopMenuProps) {
