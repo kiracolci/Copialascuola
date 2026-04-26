@@ -40,7 +40,7 @@ const schedule = [
     items: [
       {
         time: "Ore 19:00",
-        desc: "La festa prosegue con cena e musica intorno al fuoco ad offerta libera.",
+        desc: "La festa prosegue con cena e musica intorno al fuoco.",
       },
     ],
   },
@@ -72,7 +72,7 @@ export default function Festa() {
           <p className="sl-hero__date">Sabato 30 maggio 2026</p>
           <p className="sl-hero__place">San Liberatore di Collestatte (TR)</p>
           <div className="sl-hero__tags">
-            {["Musica dal vivo", "Giochi", "Cibo", "E molto altro"].map((t) => (
+            {["Musica", "Giochi", "Cibo", "E molto altro"].map((t) => (
               <span key={t} className="sl-tag">
                 {t}
               </span>
@@ -89,7 +89,13 @@ export default function Festa() {
         </p>
         <p className="sl-banner__sub">Dalle ore 16… finché c'è festa</p>
       </div>
-
+{/* Marquee */}
+<div className="sl-marquee">
+  <div className="sl-marquee__track">
+    <span>🍦 Gelateria-Yogurteria Andrea & 🧀 Lu Pizzicarolo ·🍦 Gelateria-Yogurteria Andrea & 🧀 Lu Pizzicarolo ·🍦 Gelateria-Yogurteria Andrea & 🧀 Lu Pizzicarolo · </span>
+    <span>🍦 Gelateria-Yogurteria Andrea & 🧀 Lu Pizzicarolo ·🍦 Gelateria-Yogurteria Andrea & 🧀 Lu Pizzicarolo ·🍦 Gelateria-Yogurteria Andrea & 🧀 Lu Pizzicarolo · </span>
+  </div>
+</div>
       {/* Programme */}
       <div className="sl-section">
         <div className="sl-section__header">

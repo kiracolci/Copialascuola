@@ -140,6 +140,34 @@
     text-transform: uppercase;
   }
   
+  .sl-marquee {
+    background: #2a2210;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .sl-marquee__track {
+    display: flex;
+    width: max-content;
+    animation: sl-marquee 20s linear infinite;
+  }
+  
+  .sl-marquee__track span {
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding-right: 24px;
+    color: #feda33;
+    font-family: sans-serif;
+  }
+  
+  @keyframes sl-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
   /* â”€â”€ Programme Section â”€â”€ */
   .sl-section {
     max-width: 720px;
