@@ -13,7 +13,7 @@ const schedule = [
     period: "Pomeriggio",
     icon: "🌤️",
     items: [
-      { time: "Ore 15:30", desc: "Apertura iscrizioni caccia al tesoro" },
+      { time: "Ore 15:30", desc: "Apertura iscrizioni caccia al tesoro in piazza" },
       {
         time: "Dalle 16:00",
         desc: "Via delle attività aperte a tutte le età:",
