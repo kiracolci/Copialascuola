@@ -85,7 +85,7 @@ export default function Festa() {
       <div className="sl-banner">
         <p className="sl-banner__text">
           🏆 Grande caccia al tesoro —{" "}
-          <strong>iscrizioni aperte dalle 15:30!</strong>
+          <strong>iscrizioni in piazza aperte dalle 15:30! </strong>
         </p>
         <p className="sl-banner__sub">Dalle ore 16… finché c'è festa</p>
       </div>
@@ -97,6 +97,7 @@ export default function Festa() {
   </div>
 </div>
       {/* Programme */}
+
       <div className="sl-section">
         <div className="sl-section__header">
           <span className="sl-section__eyebrow">30 maggio</span>
