@@ -6,30 +6,30 @@ const schedule = [
     period: "Mattina",
     icon: "☀️",
     items: [
-      { time: "Ore 10:30", desc: "Escursione naturalistica (circa 2 ore)" },
+      { time: "Ore 10:30", desc: "Escursione naturalistica (circa 2 ore), per registrarsi scrivere a scuoletta.sanlib@gmail.com" },
     ],
   },
   {
     period: "Pomeriggio",
     icon: "🌤️",
     items: [
-      { time: "Ore 15:30", desc: "Apertura iscrizioni caccia al tesoro in piazza" },
+      { time: "Ore 15:30", desc: "Apertura iscrizioni ai giochi in piazza" },
       {
         time: "Dalle 16:00",
         desc: "Via delle attività aperte a tutte le età:",
         activities: [
-          "Grande caccia al tesoro con premio finale",
-          "Gara dolci con giuria",
-          "Pesca della mela",
-          "Tiro alla fune",
-          "Piñata",
-          "Tiro al barattolo",
-          "Indovina il peso del prosciutto",
+          " 15:30-18:30  Grande caccia al tesoro con premio finale",
+          "16:00-19:00  tavoli tematici, giochi e attività per bambini ",
+          "Spazio disegno per bambini",
+          "Giochi popolari in piazza",
+          "Torneo di Bocce",
+          "18:00-19:00 Gara di dolci",
+          "19:00 premiazioni",
         ],
       },
       {
         time: "",
-        desc: "Nel pomeriggio sarà possibile visitare la mostra della residenza artistica presso la Scuoletta.",
+        desc: "Tavoli tematici Nel pomeriggio sarà possibile consultare i materiali della residenza artistica realizzata lo scorso autunno. Tavoli liberi per giochi e attività di gruppo.",
         italic: true,
       },
     ],
@@ -40,7 +40,7 @@ const schedule = [
     items: [
       {
         time: "Ore 19:00",
-        desc: "La festa prosegue con cena e musica intorno al fuoco.",
+        desc: "La festa prosegue con racconti e musica intorno al fuoco. Cibo fino alle 22:00",
       },
     ],
   },
