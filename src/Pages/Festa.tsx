@@ -47,6 +47,10 @@ const schedule = [
     items: [
       {
         time: "Ore 19:00",
+        desc: "Premiazioni dei giochi svolti durante la giornata",
+      },
+      {
+        time: "Ore 19:00",
         desc: "La festa prosegue con racconti e musica intorno al fuoco. Cibo (bruschette sulla griglia, Pizzicarolo e gelati) fino alle 22:00",
       },
     ],
