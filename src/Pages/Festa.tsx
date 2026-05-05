@@ -35,13 +35,6 @@ const schedule = [
   },
 
   {
-    period: "Premiazione",
-    icon: "🏆",
-    items: [
-      { time: "Ore 19:00", desc: "Premiazioni dei giochi svolti durante la giornata" },
-    ],
-  },
-  {
     period: "Sera",
     icon: "🌙",
     items: [
