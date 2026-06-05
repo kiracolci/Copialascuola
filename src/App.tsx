@@ -15,25 +15,6 @@ import MobileMenu from "./Pages/MobileMenu";
 function AppInner() {
   const location = useLocation();
   const [showContact, setShowContact] = useState(false);
-  const [showFesta, setShowFesta] = useState(false);
-
-  useEffect(() => {
-    if (location.pathname === "/Festa") {
-      setShowFesta(false);
-      return;
-    }
-  
-    // show after 3 seconds on first load
-    const first = setTimeout(() => setShowFesta(true), 3000);
-  
-    // then every 5 minutes
-    const interval = setInterval(() => setShowFesta(true), 5 * 60 * 1000);
-  
-    return () => {
-      clearTimeout(first);
-      clearInterval(interval);
-    };
-  }, [location.pathname]);
 
   return (
     <>
