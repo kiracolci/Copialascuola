@@ -66,13 +66,6 @@ export default function Festa() {
 
   {/* Festa conclusa banner */}
 
-  <div className="sl-conclusa">
-  <p>🎉 La festa è conclusa! Segui il nostro Instagram per le foto →{" "}
-    <a href="https://www.instagram.com/scuoletta_sanlib" target="_blank" rel="noopener noreferrer">
-      @scuoletta_sanlib
-    </a>
-  </p>
-</div>
 
         {/* Hero */}
       <div className="sl-hero">
@@ -96,6 +89,13 @@ export default function Festa() {
         </div>
       </div>
       
+      <div className="sl-conclusa">
+  <p>🎉 La festa è conclusa! Segui il nostro Instagram per le foto →{" "}
+    <a href="https://www.instagram.com/scuoletta_sanlib" target="_blank" rel="noopener noreferrer">
+      @scuoletta_sanlib
+    </a>
+  </p>
+</div>
 
       {/* Highlight banner */}
       <div className="sl-banner">
