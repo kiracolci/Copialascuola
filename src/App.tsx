@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 import Home from "./Pages/Home";
 import Info from "./Pages/Info";
@@ -12,12 +12,11 @@ import DesktopMenu from "./Pages/DesktopMenu";
 import ContactPopup from "./Pages/ContactPopup";
 import MobileMenu from "./Pages/MobileMenu";
 
-function AppInner() {
-  const location = useLocation();
+function App() {
   const [showContact, setShowContact] = useState(false);
 
   return (
-    <>
+    <BrowserRouter>
       <DesktopMenu onContact={() => setShowContact(true)} />
       <MobileMenu onContact={() => setShowContact(true)} />
       <Routes>
@@ -29,14 +28,6 @@ function AppInner() {
         <Route path="/Festa" element={<Festa />} />
       </Routes>
       {showContact && <ContactPopup onClose={() => setShowContact(false)} />}
-    </>
-  );
-}
-
-function App() {
-  return (
-    <BrowserRouter>
-      <AppInner />
     </BrowserRouter>
   );
 }
