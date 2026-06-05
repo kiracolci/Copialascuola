@@ -46,9 +46,7 @@ Un legame fatto di ritorni, memoria e relazioni mantenute nel tempo.
       content: (
         <>
           <p>
-          Centro Umbro Residenze Artistiche riconosciuto dalla Regione Umbria dal 2018.
-Promuove residenze multidisciplinari, incubazione progettuale, mediazione culturale e pratiche artistiche contemporanee.
-          </p>
+          C.U.R.A. – Centro Umbro di Residenze Artistiche è composto da La Mama Umbria, International di Spoleto,  Ge.Ci.Te. (Foligno), Associazione Demetra di Terni, Centro Teatrale Umbro di Gubbio e Micro Teatro Terra Marique di Perugia. Dal 2015 realizza residenze multidisciplinari, progetti di comunità e rigenerazione dei territori e nello spazio pubblico e percorsi di incubazione di nuove idee legate ai linguaggi artistici contemporanei e alle tecnologie digitali. Un modello unico e innovativo di ricerca e sviluppo nell’ambito delle arti performative con artisti nazionali e internazionali, per rafforzare il ruolo della Regione Umbria nel settore dello spettacolo dal vivo e favorire la crescita e lo sviluppo del tessuto artistico regionale al livello nazionale e internazionale. C.U.R.A. è un progetto sostenuto da MiC e Regione Umbria nell’ambito del progetto nazionale di Residenze Artistiche</p>
         </>
       ),
     },

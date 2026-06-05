@@ -442,3 +442,27 @@
   body:has(.sl-page) .menu-item:not(.active) {
     color: white !important;
   }
+
+
+  .sl-conclusa {
+    background: #000000;
+    color: #feda33;
+    text-align: center;
+    padding: 16px 24px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .sl-conclusa a {
+    color: #feda33;
+    text-decoration: underline;
+  }
+  
+  .sl-conclusa a:hover {
+    opacity: 0.7;
+  }

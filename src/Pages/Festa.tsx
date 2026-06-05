@@ -63,6 +63,17 @@ export default function Festa() {
 
   return (
 <div className="sl-page festa-page">
+
+  {/* Festa conclusa banner */}
+
+  <div className="sl-conclusa">
+  <p>🎉 La festa è conclusa! Segui il nostro Instagram per le foto →{" "}
+    <a href="https://www.instagram.com/scuoletta_sanlib" target="_blank" rel="noopener noreferrer">
+      @scuoletta_sanlib
+    </a>
+  </p>
+</div>
+
         {/* Hero */}
       <div className="sl-hero">
         <div className="sl-hero__overlay" />
@@ -84,6 +95,7 @@ export default function Festa() {
           </div>
         </div>
       </div>
+      
 
       {/* Highlight banner */}
       <div className="sl-banner">

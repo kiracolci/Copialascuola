@@ -11,7 +11,6 @@ import Festa from "./Pages/Festa";
 import DesktopMenu from "./Pages/DesktopMenu";
 import ContactPopup from "./Pages/ContactPopup";
 import MobileMenu from "./Pages/MobileMenu";
-import FestaPopup from "./Pages/FestaPopup";
 
 function AppInner() {
   const location = useLocation();
@@ -49,7 +48,6 @@ function AppInner() {
         <Route path="/Festa" element={<Festa />} />
       </Routes>
       {showContact && <ContactPopup onClose={() => setShowContact(false)} />}
-      {showFesta && <FestaPopup onClose={() => setShowFesta(false)} />}
     </>
   );
 }

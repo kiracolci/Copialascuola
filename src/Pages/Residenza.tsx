@@ -339,6 +339,9 @@ Allo stesso tempo, durante il periodo di residenza sono emerse anche le criticit
       </span>
     </p>
     <p><strong>Testi</strong> — Federico D’Orazio, Anna Martinatti, Chiara Pavolucci</p>
+
+    <p> La Residenza a San Liberatore 2025 è un progetto realizzato con il supporto di Associazione Demetra 𝘯𝘦𝘭l'ambito di 𝘊.𝘜.𝘙.𝘈. 𝘊𝘦𝘯𝘵𝘳𝘰 𝘜𝘮𝘣𝘳𝘰 𝘙𝘦𝘴𝘪𝘥𝘦𝘯𝘻𝘦 𝘈𝘳𝘵𝘪𝘴𝘵𝘪𝘤𝘩𝘦</p>
+
   </div>
           </div>
 
