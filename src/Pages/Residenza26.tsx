@@ -5,6 +5,7 @@ import ContactPopup from "./ContactPopup";
 export default function Residenza26() {
   const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [showContact, setShowContact] = useState(false);
+  const [showApply, setShowApply] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -40,7 +41,8 @@ export default function Residenza26() {
         </section>
 
         {/* VISUAL SUMMARY */}
-        <div className="r26-summary r26-fade" ref={el => { sectionsRef.current[0] = el; }}>          <div className="r26-cards">
+        <div className="r26-summary r26-fade" ref={el => { sectionsRef.current[0] = el; }}>
+          <div className="r26-cards">
             <div className="r26-card r26-card--accent">
               <span className="r26-card-value">19 OTT –<br />3 NOV</span>
               <span className="r26-card-label">Periodo</span>
@@ -57,6 +59,10 @@ export default function Residenza26() {
               <span className="r26-card-value">1.400€<br />+ alloggio</span>
               <span className="r26-card-label">Compenso lordo</span>
             </div>
+            <div className="r26-card r26-card--deadline">
+              <span className="r26-card-value">15 AGO<br />2026</span>
+              <span className="r26-card-label">Scadenza candidature</span>
+            </div>
           </div>
 
           <div className="r26-tags">
@@ -70,6 +76,10 @@ export default function Residenza26() {
             <span className="r26-tag">Arboricoltura</span>
             <span className="r26-tag">Sostenibilità Energetica</span>
           </div>
+
+          <button className="r26-apply-btn" onClick={() => setShowApply(true)}>
+            APPLICA ORA
+          </button>
         </div>
 
         <div className="r26-divider" />
@@ -129,18 +139,15 @@ export default function Residenza26() {
               <span className="r26-highlight">fabbricato di circa 200 mq</span> e
               un terreno scosceso composto in parte da bosco di querce e in parte
               da terreno seminativo-forestale, attualmente in{" "}
-              <span className="r26-highlight">
-                comodato d'uso a La Scuoletta APS ETS
-              </span>
-              .
+              <span className="r26-highlight">comodato d'uso a La Scuoletta APS ETS</span>.
             </p>
             <p>
               L'intenzione è realizzare un{" "}
               <span className="r26-highlight">circolo culturale</span> dedicato a
               laboratori educativi, artistici e formativi, con una piccola taverna
               come servizio collaterale. Lo sviluppo ruoterà intorno alla{" "}
-              <span className="r26-highlight">crescita spirituale della persona</span>
-              , prevedendo attività ludiche e artistiche e momenti dedicati alla
+              <span className="r26-highlight">crescita spirituale della persona</span>,
+              prevedendo attività ludiche e artistiche e momenti dedicati alla
               promozione enogastronomica e turistica.
             </p>
             <p>
@@ -162,55 +169,52 @@ export default function Residenza26() {
             </p>
             <p>
               Le attività si concentreranno su due assi. Il primo:{" "}
-              <span className="r26-highlight">
-                documentazione, ricerca d'archivio e di buone pratiche
-              </span>{" "}
+              <span className="r26-highlight">documentazione, ricerca d'archivio e di buone pratiche</span>{" "}
               nel corso delle fasi di cantiere a supporto alla definizione degli
               spazi del futuro circolo culturale.
             </p>
             <p>
               Il secondo:{" "}
-              <span className="r26-highlight">
-                definizione delle sinergie funzionali ed ecologiche
-              </span>{" "}
+              <span className="r26-highlight">definizione delle sinergie funzionali ed ecologiche</span>{" "}
               tra il nuovo edificio e i terreni agricoli soprastanti, con
               l'intenzione di sviluppare un{" "}
               <span className="r26-highlight">percorso etno-botanico nel bosco</span>.
             </p>
             <p>
               Al termine della residenza è prevista una{" "}
-              <span className="r26-highlight">
-                restituzione con evento aperto alla comunità locale
-              </span>
-              . I candidati dovranno essere a conoscenza del lavoro svolto nella
+              <span className="r26-highlight">restituzione con evento aperto alla comunità locale</span>.
+              I candidati dovranno essere a conoscenza del lavoro svolto nella
               precedente Residenza 2025.
             </p>
           </div>
 
           <div ref={el => { sectionsRef.current[4] = el; }} className="r26-section r26-fade">
-            <h3>Come Candidarsi</h3>
-            <p>
-              Possono candidarsi{" "}
-              <span className="r26-highlight">professionisti di ogni età</span>,
-              individualmente o in rappresentanza di associazioni o imprese.
-              Saranno selezionate un massimo di{" "}
-              <span className="r26-highlight">2 candidature</span>.
-            </p>
+  <h3>Come Candidarsi</h3>
+  <p>
+    Possono candidarsi{" "}
+    <span className="r26-highlight">professionisti di ogni età</span>,
+    individualmente o in rappresentanza di associazioni o imprese.
+    Saranno selezionate un massimo di{" "}
+    <span className="r26-highlight">2 candidature</span>.
+  </p>
 
-            <div className="r26-deadline">
-              <p>📩 scuoletta.sanlib@gmail.com</p>
-              <p>Scadenza: 15 agosto 2026</p>
-              <p>
-                Max 15 MB · manifestazione di interesse (max 4.000 caratteri) +
-                CV e/o portfolio
-              </p>
-            </div>
+  <div className="r26-deadline">
+    <p>📩 scuoletta.sanlib@gmail.com</p>
+    <p>Scadenza: 15 agosto 2026</p>
+    <p>
+      Max 15 MB · manifestazione di interesse (max 4.000 caratteri) +
+      CV e/o portfolio
+    </p>
+  </div>
 
-            <p>
-              Per chiarimenti:{" "}
-              <span className="r26-highlight">scuoletta.sanlib@gmail.com</span>
-            </p>
-          </div>
+  <p>
+    Per chiarimenti:{" "}
+    <span className="r26-highlight">scuoletta.sanlib@gmail.com</span>
+  </p>
+  <button className="r26-apply-btn" onClick={() => setShowApply(true)}>
+    APPLICA ORA
+  </button>
+</div>
 
           {/* CREDITS */}
           <div className="r26-credits">
@@ -230,6 +234,23 @@ export default function Residenza26() {
         <p>© 2026 Progetto La Scuoletta | San Liberatore.</p>
         <p>Un futuro per un posto dimenticato | Strada Romita, Frazione San Liberatore (TR)</p>
       </footer>
+
+      {/* APPLY POPUP */}
+      {showApply && (
+        <div className="r26-popup-overlay" onClick={() => setShowApply(false)}>
+          <div className="r26-popup" onClick={(e) => e.stopPropagation()}>
+            <button className="r26-popup-close" onClick={() => setShowApply(false)}>✕</button>
+            <p className="r26-popup-title">Come candidarsi</p>
+            <div className="r26-popup-box">
+              <p className="r26-popup-email">📩 scuoletta.sanlib@gmail.com</p>
+              <p className="r26-popup-deadline">Scadenza: 15 agosto 2026</p>
+              <p className="r26-popup-note">
+                Max 15 MB · manifestazione di interesse (max 4.000 caratteri) + CV e/o portfolio
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {showContact && <ContactPopup onClose={() => setShowContact(false)} />}
     </div>

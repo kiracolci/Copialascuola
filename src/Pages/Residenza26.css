@@ -3,7 +3,6 @@
     src: url("/fonts/Baby Doll.ttf") format("truetype");
   }
   
-  /* WRAPPER */
   .r26-wrapper {
     background: #fffaf0;
     min-height: 100vh;
@@ -70,7 +69,7 @@
     color: #000;
   }
   
-  /* ── VISUAL SUMMARY CARDS ── */
+  /* CARDS */
   .r26-summary {
     max-width: 900px;
     margin: 0 auto 60px;
@@ -79,7 +78,7 @@
   
   .r26-cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 16px;
     margin-bottom: 32px;
   }
@@ -95,7 +94,7 @@
   
   .r26-card-value {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(22px, 3vw, 30px);
+    font-size: clamp(20px, 2.5vw, 28px);
     font-weight: 700;
     color: #000;
     line-height: 1.1;
@@ -110,17 +109,21 @@
     color: #000;
   }
   
-  /* accent card */
   .r26-card--accent {
     background: #feda33;
     border-color: #feda33;
   }
   
-  /* DISCIPLINE TAGS */
+  .r26-card--deadline {
+    border: 2px solid #000;
+  }
+  
+  /* TAGS */
   .r26-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin-bottom: 28px;
   }
   
   .r26-tag {
@@ -137,6 +140,29 @@
   .r26-tag:nth-child(odd) {
     background: #feda33;
     border-color: #feda33;
+  }
+  
+  /* APPLY BUTTON */
+  .r26-apply-btn {
+    display: inline-block;
+    background: #feda33;
+    color: #000000;
+    border: none;
+    padding: 14px 32px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s ease, color 0.2s ease;
+    border: 1.5px solid #feda33;
+
+  }
+  
+  .r26-apply-btn:hover {
+    background: transparent;
+    border: 1.5px solid #000;
+    color: #070707;
   }
   
   /* DIVIDER */
@@ -191,14 +217,13 @@
     text-align: justify;
   }
   
-  /* HIGHLIGHT */
   .r26-highlight {
     background: #feda33;
     padding: 0 4px;
     color: #000;
   }
   
-  /* SCROLL FADE */
+  /* FADE */
   .r26-fade {
     opacity: 0;
     transform: translateY(25px);
@@ -208,29 +233,6 @@
   .r26-fade.visible {
     opacity: 1;
     transform: translateY(0);
-  }
-  
-  /* DEADLINE BOX */
-  .r26-deadline {
-    background: #feda33;
-    padding: 20px 24px;
-    margin: 32px 0;
-    border-left: 4px solid #000;
-  }
-  
-  .r26-deadline p {
-    margin: 0 0 6px 0;
-    font-size: 15px;
-    font-weight: 600;
-    color: #000;
-    text-align: left;
-  }
-  
-  .r26-deadline p:last-child {
-    margin-bottom: 0;
-    font-weight: 400;
-    font-size: 13px;
-    opacity: 0.75;
   }
   
   /* CREDITS */
@@ -262,7 +264,74 @@
     color: #000;
   }
   
-  /* ── MOBILE ── */
+  /* APPLY POPUP */
+  .r26-popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .r26-popup {
+    background: #fffaf0;
+    padding: 40px;
+    max-width: 480px;
+    width: 90%;
+    position: relative;
+  }
+  
+  .r26-popup-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+  }
+  
+  .r26-popup-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin: 0 0 20px 0;
+  }
+  
+  .r26-popup-box {
+    background: #feda33;
+    padding: 20px 24px;
+    border-left: 4px solid #000;
+  }
+  
+  .r26-popup-email {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: #000;
+  }
+  
+  .r26-popup-deadline {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #000;
+  }
+  
+  .r26-popup-note {
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 0.75;
+    margin: 0;
+    color: #000;
+  }
+  
+  /* MOBILE */
   @media (max-width: 900px) {
     .r26-hero {
       padding: 120px 20px 60px;
@@ -313,4 +382,30 @@
     .r26-intro p {
       font-size: 16px;
     }
+  
+    .r26-popup {
+      padding: 30px 24px;
+    }
+  }
+
+  .r26-deadline {
+    background: #feda33;
+    padding: 20px 24px;
+    margin: 32px 0;
+    border-left: 4px solid #000;
+  }
+  
+  .r26-deadline p {
+    margin: 0 0 6px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    text-align: left;
+  }
+  
+  .r26-deadline p:last-child {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 13px;
+    opacity: 0.75;
   }
