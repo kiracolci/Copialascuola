@@ -7,10 +7,13 @@ import Galleria from "./Pages/Galleria";
 import Residenza from "./Pages/Residenza";
 import Chisiamo from "./Pages/Chisiamo";
 import Festa from "./Pages/Festa";
+import Residenza26 from "./Pages/Residenza26";
+
 
 import DesktopMenu from "./Pages/DesktopMenu";
 import ContactPopup from "./Pages/ContactPopup";
 import MobileMenu from "./Pages/MobileMenu";
+
 
 function App() {
   const [showContact, setShowContact] = useState(false);
@@ -26,6 +29,7 @@ function App() {
         <Route path="/Residenza" element={<Residenza />} />
         <Route path="/Chisiamo" element={<Chisiamo />} />
         <Route path="/Festa" element={<Festa />} />
+        <Route path="/Residenza26" element={<Residenza26 />} />
       </Routes>
       {showContact && <ContactPopup onClose={() => setShowContact(false)} />}
     </BrowserRouter>
@@ -33,3 +37,4 @@ function App() {
 }
 
 export default App;
+

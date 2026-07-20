@@ -81,7 +81,7 @@ Centro culturale per San Liberatore        </p>
           <p className="the-center-text">
             <span className="fase-static">FASE:</span>&nbsp;
             <span className="fase-blink">
-              PIANIFICAZIONE ARCHITETTONICA
+              CALL PER RESIDENZA 2026 APERTA
             </span>
           </p>
         </div>

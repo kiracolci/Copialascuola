@@ -1,0 +1,316 @@
+@font-face {
+    font-family: "doll";
+    src: url("/fonts/Baby Doll.ttf") format("truetype");
+  }
+  
+  /* WRAPPER */
+  .r26-wrapper {
+    background: #fffaf0;
+    min-height: 100vh;
+  }
+  
+  .r26-editorial > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* HERO */
+  .r26-hero {
+    padding: 180px 20px 80px;
+    text-align: center;
+    color: #000;
+  }
+  
+  .r26-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 4px 10px;
+    background: #feda33;
+    color: #1c1c1c;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transform: rotate(4deg);
+  }
+  
+  .r26-title {
+    max-width: 620px;
+    margin: 0 auto 10px;
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    line-height: 1.05;
+    color: #000;
+  }
+  
+  .r26-title span {
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #000;
+  }
+  
+  .r26-title span:first-child {
+    font-size: clamp(44px, 6vw, 68px);
+    font-style: oblique;
+    text-align: left;
+  }
+  
+  .r26-title span:last-child {
+    font-size: clamp(30px, 4vw, 40px);
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .r26-hero p {
+    font-size: 15px;
+    opacity: 0.55;
+    margin-top: 8px;
+    letter-spacing: 0.3px;
+    color: #000;
+  }
+  
+  /* ── VISUAL SUMMARY CARDS ── */
+  .r26-summary {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+  }
+  
+  .r26-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .r26-card {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .r26-card-value {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 700;
+    color: #000;
+    line-height: 1.1;
+  }
+  
+  .r26-card-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    color: #000;
+  }
+  
+  /* accent card */
+  .r26-card--accent {
+    background: #feda33;
+    border-color: #feda33;
+  }
+  
+  /* DISCIPLINE TAGS */
+  .r26-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .r26-tag {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border: 1.5px solid #000;
+    color: #000;
+    cursor: default;
+  }
+  
+  .r26-tag:nth-child(odd) {
+    background: #feda33;
+    border-color: #feda33;
+  }
+  
+  /* DIVIDER */
+  .r26-divider {
+    width: 40px;
+    height: 2px;
+    background: #feda33;
+    margin: 0 auto 60px;
+  }
+  
+  /* INTRO */
+  .r26-intro {
+    max-width: 760px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+  }
+  
+  .r26-intro p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    color: #000;
+    text-align: justify;
+  }
+  
+  /* SECTIONS */
+  .r26-sections {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+  }
+  
+  .r26-section {
+    margin-bottom: 80px;
+    color: #000;
+  }
+  
+  .r26-section h3 {
+    font-size: 13px;
+    letter-spacing: 2px;
+    opacity: 0.6;
+    margin-bottom: 20px;
+    color: #000;
+    text-transform: uppercase;
+  }
+  
+  .r26-section p {
+    font-size: 17px;
+    line-height: 1.65;
+    margin-bottom: 16px;
+    color: #000;
+    text-align: justify;
+  }
+  
+  /* HIGHLIGHT */
+  .r26-highlight {
+    background: #feda33;
+    padding: 0 4px;
+    color: #000;
+  }
+  
+  /* SCROLL FADE */
+  .r26-fade {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .r26-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* DEADLINE BOX */
+  .r26-deadline {
+    background: #feda33;
+    padding: 20px 24px;
+    margin: 32px 0;
+    border-left: 4px solid #000;
+  }
+  
+  .r26-deadline p {
+    margin: 0 0 6px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    text-align: left;
+  }
+  
+  .r26-deadline p:last-child {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 13px;
+    opacity: 0.75;
+  }
+  
+  /* CREDITS */
+  .r26-credits {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.85;
+    color: #000;
+  }
+  
+  .r26-credits strong {
+    font-weight: 600;
+  }
+  
+  /* FOOTER */
+  .r26-footer {
+    text-align: center;
+    padding: 20px;
+    color: #000;
+  }
+  
+  .r26-footer p {
+    font-size: 12px;
+    opacity: 0.7;
+    margin: 4px 0;
+    color: #000;
+  }
+  
+  /* ── MOBILE ── */
+  @media (max-width: 900px) {
+    .r26-hero {
+      padding: 120px 20px 60px;
+    }
+  
+    .r26-cards {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+  
+    .r26-sections,
+    .r26-intro,
+    .r26-summary {
+      padding: 0 16px 60px;
+    }
+  
+    .r26-section {
+      margin-bottom: 60px;
+    }
+  
+    .r26-fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+  
+    .r26-fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .r26-title span:first-child {
+      text-align: center;
+    }
+  
+    .r26-title span:last-child {
+      text-align: center;
+      margin-left: 0;
+    }
+  
+    .r26-card {
+      padding: 18px 14px;
+    }
+  
+    .r26-section p,
+    .r26-intro p {
+      font-size: 16px;
+    }
+  }
