@@ -70,7 +70,7 @@ export default function Home() {
 Centro culturale per San Liberatore        </p>
 
         <div className="hero-buttons">
-          <button onClick={() => navigate('/Info')}>COSA STA SUCCEDENDO?</button>
+          <button onClick={() => navigate('/Residenza26')}>CANDIDATURA RESIDENZA 2026</button>
           <button className="outline"   onClick={() => setShowContact(true)}>CONTATTI</button>
         </div>
 
