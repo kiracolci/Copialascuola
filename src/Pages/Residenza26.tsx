@@ -60,7 +60,7 @@ export default function Residenza26() {
               <span className="r26-card-label">Compenso lordo</span>
             </div>
             <div className="r26-card r26-card--deadline">
-              <span className="r26-card-value">15 AGO<br />2026</span>
+              <span className="r26-card-value">21 AGO<br />2026</span>
               <span className="r26-card-label">Scadenza candidature</span>
             </div>
           </div>
@@ -200,7 +200,7 @@ export default function Residenza26() {
 
   <div className="r26-deadline">
     <p>📩 scuoletta.sanlib@gmail.com</p>
-    <p>Scadenza: 15 agosto 2026</p>
+    <p>Scadenza: 21 agosto 2026</p>
     <p>
       Max 15 MB · manifestazione di interesse (max 4.000 caratteri) +
       CV e/o portfolio
@@ -243,7 +243,7 @@ export default function Residenza26() {
             <p className="r26-popup-title">Come candidarsi</p>
             <div className="r26-popup-box">
               <p className="r26-popup-email">📩 scuoletta.sanlib@gmail.com</p>
-              <p className="r26-popup-deadline">Scadenza: 15 agosto 2026</p>
+              <p className="r26-popup-deadline">Scadenza: 21 agosto 2026</p>
               <p className="r26-popup-note">
                 Max 15 MB · manifestazione di interesse (max 4.000 caratteri) + CV e/o portfolio
               </p>
