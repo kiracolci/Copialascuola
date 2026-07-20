@@ -56,7 +56,7 @@ export default function Residenza26() {
               <span className="r26-card-label">Posti disponibili</span>
             </div>
             <div className="r26-card">
-              <span className="r26-card-value">1.400€<br />+ alloggio</span>
+              <span className="r26-card-value">1.200€<br />+ alloggio</span>
               <span className="r26-card-label">Compenso lordo</span>
             </div>
             <div className="r26-card r26-card--deadline">
@@ -77,9 +77,14 @@ export default function Residenza26() {
             <span className="r26-tag">Sostenibilità Energetica</span>
           </div>
 
-          <button className="r26-apply-btn" onClick={() => setShowApply(true)}>
-            APPLICA ORA
-          </button>
+          <div className="r26-btn-group">
+  <button className="r26-apply-btn" onClick={() => setShowApply(true)}>
+    APPLICA ORA
+  </button>
+  <a className="r26-download-btn" href="/26.pdf" download>
+    SCARICA PIÙ INFORMAZIONI ↓
+  </a>
+</div>
         </div>
 
         <div className="r26-divider" />
