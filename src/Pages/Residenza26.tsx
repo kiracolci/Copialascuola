@@ -5,7 +5,6 @@ import ContactPopup from "./ContactPopup";
 export default function Residenza26() {
   const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [showContact, setShowContact] = useState(false);
-  const [showApply, setShowApply] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,6 +27,10 @@ export default function Residenza26() {
 
   return (
     <div className="r26-wrapper">
+      <div className="r26-closed-bar">
+  <span className="r26-closed-bar-badge">BANDO CHIUSO</span>
+  <span className="r26-closed-bar-text">Le candidature sono chiuse · Scadenza: 21 agosto 2026</span>
+</div>
       <div className="r26-editorial">
 
         {/* HERO */}
@@ -78,14 +81,12 @@ export default function Residenza26() {
           </div>
 
           <div className="r26-btn-group">
-  <button className="r26-apply-btn" onClick={() => setShowApply(true)}>
-    APPLICA ORA
-  </button>
+          <span className="r26-apply-btn--closed">CANDIDATURE CHIUSE</span>
   <a className="r26-download-btn" href="/26.pdf" download>
     SCARICA PIÙ INFORMAZIONI ↓
   </a>
 </div>
-        </div>
+        </div>2
 
         <div className="r26-divider" />
 
@@ -216,9 +217,7 @@ export default function Residenza26() {
     Per chiarimenti:{" "}
     <span className="r26-highlight">scuoletta.sanlib@gmail.com</span>
   </p>
-  <button className="r26-apply-btn" onClick={() => setShowApply(true)}>
-    APPLICA ORA
-  </button>
+
 </div>
 
           {/* CREDITS */}
@@ -239,23 +238,6 @@ export default function Residenza26() {
         <p>© 2026 Progetto La Scuoletta | San Liberatore.</p>
         <p>Un futuro per un posto dimenticato | Strada Romita, Frazione San Liberatore (TR)</p>
       </footer>
-
-      {/* APPLY POPUP */}
-      {showApply && (
-        <div className="r26-popup-overlay" onClick={() => setShowApply(false)}>
-          <div className="r26-popup" onClick={(e) => e.stopPropagation()}>
-            <button className="r26-popup-close" onClick={() => setShowApply(false)}>✕</button>
-            <p className="r26-popup-title">Come candidarsi</p>
-            <div className="r26-popup-box">
-              <p className="r26-popup-email">📩 scuoletta.sanlib@gmail.com</p>
-              <p className="r26-popup-deadline">Scadenza: 21 agosto 2026</p>
-              <p className="r26-popup-note">
-                Max 15 MB · manifestazione di interesse (max 4.000 caratteri) + CV e/o portfolio
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
 
       {showContact && <ContactPopup onClose={() => setShowContact(false)} />}
     </div>
